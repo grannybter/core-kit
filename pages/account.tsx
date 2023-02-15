@@ -11,6 +11,8 @@ import { useRouter } from 'next/router';
 import { User } from '@supabase/supabase-js';
 import { withPageAuth } from '@supabase/auth-helpers-nextjs';
 
+import Arrow from 'components/icons/Arrow';
+
 interface Props {
   title: string;
   description?: string;
@@ -89,6 +91,7 @@ export default function Account({ user }: { user: User }) {
                 Manage your subscription in the customer portal.
               </p>
               <Button
+                className="bg-red-900"
                 variant="slim"
                 loading={loading}
                 disabled={loading || !subscription}
@@ -126,13 +129,13 @@ export default function Account({ user }: { user: User }) {
 
         <div className="border border-zinc-700	max-w-3xl w-full p rounded-md m-auto my-8">
             <a
-              className="cursor-pointer flex items-center justify-center w-full px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-red-600 hover:bg-red-700"
+              className="cursor-pointer group inline-flex items-center justify-center rounded-md w-full px-4 py-1.5 font-semibold text-white bg-red-600 hover:bg-red-700 transition"
               onClick={async () => {
                 await supabaseClient.auth.signOut();
                 router.push('/signin');
               }}
             >
-              Sign out
+              Sign out <Arrow/>
             </a>
         </div>
 
