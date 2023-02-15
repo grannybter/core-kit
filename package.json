@@ -9,6 +9,7 @@
     "stripe:listen": "stripe listen --forward-to=localhost:3000/api/webhooks --project-name=saas-starter"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.10",
     "@stripe/stripe-js": "1.22.0",
     "@supabase/auth-helpers-nextjs": "^0.4.5",
     "@supabase/auth-helpers-react": "^0.3.1",

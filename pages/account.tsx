@@ -5,6 +5,8 @@ import LoadingDots from 'components/ui/LoadingDots';
 import Button from 'components/ui/Button';
 import { useUser } from 'utils/useUser';
 import { postData } from 'utils/helpers';
+import { useSupabaseClient } from '@supabase/auth-helpers-react';
+import { useRouter } from 'next/router';
 
 import { User } from '@supabase/supabase-js';
 import { withPageAuth } from '@supabase/auth-helpers-nextjs';
@@ -36,6 +38,9 @@ export const getServerSideProps = withPageAuth({ redirectTo: '/signin' });
 export default function Account({ user }: { user: User }) {
   const [loading, setLoading] = useState(false);
   const { isLoading, subscription, userDetails } = useUser();
+
+  const router = useRouter();
+  const supabaseClient = useSupabaseClient();
 
   const redirectToCustomerPortal = async () => {
     setLoading(true);
@@ -81,7 +86,7 @@ export default function Account({ user }: { user: User }) {
           footer={
             <div className="flex items-start justify-between flex-col sm:flex-row sm:items-center">
               <p className="pb-4 sm:pb-0">
-                Manage your subscription on Stripe.
+                Manage your subscription in the customer portal.
               </p>
               <Button
                 variant="slim"
@@ -108,33 +113,30 @@ export default function Account({ user }: { user: User }) {
             )}
           </div>
         </Card>
-        <Card
-          title="Your Name"
-          description="Please enter your full name, or a display name you are comfortable with."
-          footer={<p>Please use 64 characters at maximum.</p>}
-        >
-          <div className="text-xl mt-8 mb-4 font-semibold">
-            {userDetails ? (
-              `${
-                userDetails.full_name ??
-                `${userDetails.first_name} ${userDetails.last_name}`
-              }`
-            ) : (
-              <div className="h-8 mb-6">
-                <LoadingDots />
-              </div>
-            )}
-          </div>
-        </Card>
+
         <Card
           title="Your Email"
-          description="Please enter the email address you want to use to login."
-          footer={<p>We will email you to verify the change.</p>}
+          description="Please use this email to login."
+          footer={<p>Contact support if you need to change your email.</p>}
         >
           <p className="text-xl mt-8 mb-4 font-semibold">
             {user ? user.email : undefined}
           </p>
         </Card>
+
+        <div className="border border-zinc-700	max-w-3xl w-full p rounded-md m-auto my-8">
+            <a
+              className="cursor-pointer flex items-center justify-center w-full px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-red-600 hover:bg-red-700"
+              onClick={async () => {
+                await supabaseClient.auth.signOut();
+                router.push('/signin');
+              }}
+            >
+              Sign out
+            </a>
+        </div>
+
+
       </div>
     </section>
   );

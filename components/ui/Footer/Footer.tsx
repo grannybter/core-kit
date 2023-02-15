@@ -6,97 +6,181 @@ import GitHub from 'components/icons/GitHub';
 
 export default function Footer() {
   return (
-    <footer className="mx-auto max-w-[1920px] px-6 bg-zinc-900">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-zinc-600 py-12 text-white transition-colors duration-150 bg-zinc-900">
-        <div className="col-span-1 lg:col-span-2">
-          <Link href="/">
-            <a className="flex flex-initial items-center font-bold md:mr-24">
-              <span className="rounded-full border border-zinc-700 mr-2">
-                <Logo />
-              </span>
-              <span>ACME</span>
-            </a>
-          </Link>
-        </div>
-        <div className="col-span-1 lg:col-span-2">
-          <ul className="flex flex-initial flex-col md:flex-1">
-            <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
-                <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
-                <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
-                  About
-                </a>
-              </Link>
-            </li>
-            <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
-                <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
-                  Careers
-                </a>
-              </Link>
-            </li>
-            <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
-                <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
-                  Blog
-                </a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="col-span-1 lg:col-span-2">
-          <ul className="flex flex-initial flex-col md:flex-1">
-            <li className="py-3 md:py-0 md:pb-4">
-              <p className="text-white font-bold hover:text-zinc-200 transition ease-in-out duration-150">
-                LEGAL
-              </p>
-            </li>
-            <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
-                <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
-                  Privacy Policy
-                </a>
-              </Link>
-            </li>
-            <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
-                <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
-                  Terms of Use
-                </a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="col-span-1 lg:col-span-6 flex items-start lg:justify-end text-white">
-          <div className="flex space-x-6 items-center h-10">
-            <a
-              aria-label="Github Repository"
-              href="https://github.com/vercel/nextjs-subscription-payments"
-            >
-              <GitHub />
-            </a>
+    <footer aria-label="Site Footer" className="bg-white">
+      <div className="max-w-screen-xl px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8 flex justify-center">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <Logo fill="#000"/>
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4 gap-x-40">
+            <div>
+              <p className="font-medium text-gray-900">Services</p>
+
+              <nav aria-label="Footer Navigation - Services" className="mt-6">
+                <ul className="space-y-4 text-sm">
+                  <li>
+                    <a
+                      href="/"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      1on1 Coaching
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      Company Review
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      Accounts Review
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      HR Consulting
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      SEO Optimisation
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div>
+              <p className="font-medium text-gray-900">Company</p>
+
+              <nav aria-label="Footer Navigation - Company" className="mt-6">
+                <ul className="space-y-4 text-sm">
+                  <li>
+                    <a
+                      href="/"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      About
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      Meet the Team
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      Accounts Review
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div>
+              <p className="font-medium text-gray-900">Helpful Links</p>
+
+              <nav aria-label="Footer Navigation - Company" className="mt-6">
+                <ul className="space-y-4 text-sm">
+                  <li>
+                    <a
+                      href="/"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      Contact
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      FAQs
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      Live Chat
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div>
+              <p className="font-medium text-gray-900">Legal</p>
+
+              <nav aria-label="Footer Navigation - Legal" className="mt-6">
+                <ul className="space-y-4 text-sm">
+                  <li>
+                    <a
+                      href="/"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      Accessibility
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      Returns Policy
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      Refund Policy
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      Hiring Statistics
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
-        </div>
-      </div>
-      <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4 bg-zinc-900">
-        <div>
-          <span>&copy; 2020 ACME, Inc. All rights reserved.</span>
-        </div>
-        <div className="flex items-center">
-          <span className="text-white">Crafted by</span>
-          <a href="https://vercel.com" aria-label="Vercel.com Link">
-            <img
-              src="/vercel.svg"
-              alt="Vercel.com Logo"
-              className="inline-block h-6 ml-4 text-white"
-            />
-          </a>
+            <p className="text-xs text-gray-500">
+              &copy; 2022-2023 Company LLC.
+            </p>
         </div>
       </div>
     </footer>
