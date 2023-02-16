@@ -1,17 +1,11 @@
-import { Fragment } from 'react'
+import { Fragment, ReactNode } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
-import { User } from '@supabase/supabase-js';
+import { withPageAuth } from '@supabase/auth-helpers-nextjs';
 
 import Dropdown from 'components/ui/Dropdown'
 
-const user = {
-  name: 'Tom Cook',
-  email: 'tom@example.com',
-  imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-}
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
   { name: 'Team', href: '#', current: false },
@@ -28,6 +22,8 @@ const userNavigation = [
 function classNames(...classes: Array<string | undefined | null | false | 0>): string {
     return classes.filter(Boolean).join(' ');
 }
+
+export const getServerSideProps = withPageAuth({ redirectTo: '/signin' });
 
 export default function Example() {
   return (
@@ -85,7 +81,7 @@ export default function Example() {
                       </button>
 
                       {/* Profile dropdown */}
-                      <Dropdown userImageUrl={user.imageUrl}/>
+                      <Dropdown userImageUrl="{user.email}"/>
                     </div>
                   </div>
                   <div className="-mr-2 flex md:hidden">
@@ -122,7 +118,7 @@ export default function Example() {
                 <div className="border-t border-gray-700 pt-4 pb-3">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
-                      <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
+                      { <img className="h-10 w-10 rounded-full" src="imageUrl" alt="" /> }
                     </div>
                     <div className="ml-3">
                       <div className="text-base font-medium leading-none text-white">Mark Bob</div>

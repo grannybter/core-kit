@@ -1,5 +1,7 @@
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
+import { useSupabaseClient } from '@supabase/auth-helpers-react';
+import { useRouter } from 'next/router';
 
 interface Props {
     userImageUrl: string;
@@ -11,9 +13,18 @@ function classNames(...classes: Array<string | undefined | null | false | 0>): s
 
 export default function Dropdown({userImageUrl}: Props) {
 
+    const router = useRouter();
+    const supabaseClient = useSupabaseClient();
+
     const userNavigation = [
-        { name: 'Account settings', href: '#' },
-        { name: 'Sign out', href: '#' },
+        { name: 'Account settings' , onclick: () => router.push('/account')},
+        { name: 'Dashboard', onclick: () => router.push('/dashboard') },
+        {
+            name: 'Sign out', onclick: async () => {
+                await supabaseClient.auth.signOut();
+                router.push('/signin');
+            }
+        },
     ]
 
     return (
@@ -38,7 +49,7 @@ export default function Dropdown({userImageUrl}: Props) {
                         <Menu.Item key={item.name}>
                             {({ active }) => (
                                 <a
-                                    href={item.href}
+                                    onClick={item.onclick}
                                     className={classNames(
                                         active ? 'bg-gray-100' : '',
                                         'block px-4 py-2 text-sm text-gray-700'
