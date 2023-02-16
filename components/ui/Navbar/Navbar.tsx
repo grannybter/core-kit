@@ -48,13 +48,8 @@ const Navbar = () => {
           <div className="flex flex-1 justify-end space-x-8 ">
             {user ? (
               <a
-                // className="text-white font-medium py-2 px-4 rounded-full bg-white bg-opacity-25 cursor-pointer"
-                // onClick={async () => {
-                //   await supabaseClient.auth.signOut();
-                //   router.push('/signin');
-                // }}
               >
-                <Dropdown userImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYnjuPl-F7fs_iUbuex_MQ5JN3KR4SMbbY8A&usqp=CAU"/>
+                <Dropdown userImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYnjuPl-F7fs_iUbuex_MQ5JN3KR4SMbbY8A&usqp=CAU" />
               </a>
             ) : (
               <Link href="/signin">

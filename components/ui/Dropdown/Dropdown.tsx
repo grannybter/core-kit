@@ -20,7 +20,7 @@ export default function Dropdown({userImageUrl}: Props) {
         { name: 'Account settings' , onclick: () => router.push('/account')},
         { name: 'Dashboard', onclick: () => router.push('/dashboard') },
         {
-            name: 'Sign out', onclick: async () => {
+            name: 'Sign out', textColor: "text-red-700", onclick: async () => {
                 await supabaseClient.auth.signOut();
                 router.push('/signin');
             }
@@ -52,7 +52,7 @@ export default function Dropdown({userImageUrl}: Props) {
                                     onClick={item.onclick}
                                     className={classNames(
                                         active ? 'bg-gray-100' : '',
-                                        'block px-4 py-2 text-sm text-gray-700'
+                                        `block px-4 py-2 text-sm ${item.textColor ? item.textColor : "text-gray-700"}`
                                     )}
                                 >
                                     {item.name}
