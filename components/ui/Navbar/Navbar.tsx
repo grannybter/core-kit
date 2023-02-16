@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import { useUser } from 'utils/useUser';
 import { useSupabaseClient } from '@supabase/auth-helpers-react';
 import Arrow from 'components/icons/Arrow';
+import Dropdown from '../Dropdown';
 
 const Navbar = () => {
   const router = useRouter();
@@ -46,15 +47,15 @@ const Navbar = () => {
 
           <div className="flex flex-1 justify-end space-x-8 ">
             {user ? (
-              <span
-                className="text-white font-medium py-2 px-4 rounded-full bg-white bg-opacity-25 cursor-pointer"
-                onClick={async () => {
-                  await supabaseClient.auth.signOut();
-                  router.push('/signin');
-                }}
+              <a
+                // className="text-white font-medium py-2 px-4 rounded-full bg-white bg-opacity-25 cursor-pointer"
+                // onClick={async () => {
+                //   await supabaseClient.auth.signOut();
+                //   router.push('/signin');
+                // }}
               >
-                Sign out
-              </span>
+                <Dropdown userImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYnjuPl-F7fs_iUbuex_MQ5JN3KR4SMbbY8A&usqp=CAU"/>
+              </a>
             ) : (
               <Link href="/signin">
                 <a className="group inline-flex items-center rounded-full bg-slate-900 px-4 py-1.5 font-semibold text-white transition hover:bg-slate-700">
