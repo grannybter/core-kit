@@ -21,7 +21,19 @@ export default function MyApp({ Component, pageProps, router }: AppProps) {
   }, []);
 
   //dashboard defualt layout
-  if (router.pathname.includes(`/dashboard`)) {
+  
+  if (router.pathname === `/dashboard/signin`) {
+    return (
+      <div className="bg-black">
+        <SessionContextProvider supabaseClient={supabaseClient}>
+          <MyUserContextProvider>
+              <Component {...pageProps} />
+          </MyUserContextProvider>
+        </SessionContextProvider>
+      </div>
+    );
+  }
+  else if (router.pathname.includes(`/dashboard`)) {
     return (
       <div className="bg-black">
         <SessionContextProvider supabaseClient={supabaseClient}>
@@ -33,7 +45,8 @@ export default function MyApp({ Component, pageProps, router }: AppProps) {
         </SessionContextProvider>
       </div>
     );
-  }//landing page default layout
+  }
+  //landing page default layout
   else {
     return (
       <div className="bg-black">

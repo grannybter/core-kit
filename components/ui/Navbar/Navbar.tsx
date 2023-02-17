@@ -49,10 +49,16 @@ const Navbar = () => {
             {user ? (
               <a
               >
-                <Dropdown userImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYnjuPl-F7fs_iUbuex_MQ5JN3KR4SMbbY8A&usqp=CAU" />
+                {/* <Dropdown userImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYnjuPl-F7fs_iUbuex_MQ5JN3KR4SMbbY8A&usqp=CAU" /> */}
+                <Link href="/dashboard">
+                <a className="group inline-flex items-center rounded-full bg-slate-900 px-4 py-1.5 font-semibold text-white transition hover:bg-slate-700">
+                  Dashboard
+                  <Arrow />
+                </a>
+              </Link>
               </a>
             ) : (
-              <Link href="/signin">
+              <Link href="/dashboard/signin">
                 <a className="group inline-flex items-center rounded-full bg-slate-900 px-4 py-1.5 font-semibold text-white transition hover:bg-slate-700">
                   Sign in
                   <Arrow />

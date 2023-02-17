@@ -22,7 +22,7 @@ export default withApiAuth(async function createCheckoutSession(
       if (!customer) throw Error('Could not get customer');
       const { url } = await stripe.billingPortal.sessions.create({
         customer,
-        return_url: `${getURL()}/account`
+        return_url: `${getURL()}/dashboard/account`
       });
 
       return res.status(200).json({ url });

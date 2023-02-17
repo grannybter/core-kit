@@ -35,7 +35,7 @@ function Card({ title, description, footer, children }: Props) {
   );
 }
 
-export const getServerSideProps = withPageAuth({ redirectTo: '/signin' });
+export const getServerSideProps = withPageAuth({ redirectTo: '/dashboard/signin' });
 
 export default function Account({ user }: { user: User }) {
   const [loading, setLoading] = useState(false);
@@ -132,7 +132,7 @@ export default function Account({ user }: { user: User }) {
               className="cursor-pointer group inline-flex items-center justify-center rounded-md w-full px-4 py-1.5 font-semibold text-white bg-red-600 hover:bg-red-700 transition"
               onClick={async () => {
                 await supabaseClient.auth.signOut();
-                router.push('/signin');
+                router.push('/dashboard/signin');
               }}
             >
               Sign out <Arrow/>

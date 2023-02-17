@@ -17,12 +17,12 @@ export default function Dropdown({userImageUrl}: Props) {
     const supabaseClient = useSupabaseClient();
 
     const userNavigation = [
-        { name: 'Account settings' , onclick: () => router.push('/account')},
+        { name: 'Account settings' , onclick: () => router.push('/dashboard/account')},
         { name: 'Dashboard', onclick: () => router.push('/dashboard') },
         {
             name: 'Sign out', textColor: "text-red-700", onclick: async () => {
                 await supabaseClient.auth.signOut();
-                router.push('/signin');
+                router.push('/dashboard/signin');
             }
         },
     ]

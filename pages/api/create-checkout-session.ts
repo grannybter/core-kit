@@ -37,7 +37,7 @@ export default withApiAuth(async function createCheckoutSession(
           trial_from_plan: true,
           metadata
         },
-        success_url: `${getURL()}/account`,
+        success_url: `${getURL()}/dashboard/account`,
         cancel_url: `${getURL()}/`
       });
 
