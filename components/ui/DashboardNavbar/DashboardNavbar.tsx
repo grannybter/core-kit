@@ -74,7 +74,7 @@ const DashboardNavbar = () => {
                   <div className="hidden md:block">
                     <div className="ml-4 flex items-center md:ml-6">
                       {/* Profile dropdown */}
-                      <Dropdown userImageUrl="{user.email}"/>
+                      <Dropdown/>
                     </div>
                   </div>
                   <div className="-mr-2 flex md:hidden">

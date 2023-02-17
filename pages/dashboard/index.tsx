@@ -1,6 +1,6 @@
 import { withPageAuth } from '@supabase/auth-helpers-nextjs';
 
-export const getServerSideProps = withPageAuth({ redirectTo: '/dashboard/signin' });
+export const getServerSideProps = withPageAuth({ redirectTo: '/signin' });
 
 export default function Example() {
   return (
