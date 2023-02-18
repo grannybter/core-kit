@@ -2,12 +2,8 @@ import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { useSupabaseClient } from '@supabase/auth-helpers-react';
 import { useRouter } from 'next/router';
-import { User } from '@supabase/supabase-js';
+import { useUser } from 'utils/useUser';
 import ChevronDown from 'components/icons/ChevronDown';
-
-interface Props {
-    userImageUrl: string;
-}
 
 function classNames(...classes: Array<string | undefined | null | false | 0>): string {
     return classes.filter(Boolean).join(' ');
@@ -17,6 +13,7 @@ export default function Dropdown() {
 
     const router = useRouter();
     const supabaseClient = useSupabaseClient();
+    const { user } = useUser();
 
     const userNavigation = [
         { name: 'Account settings' , onclick: () => router.push('/dashboard/account')},
@@ -32,9 +29,9 @@ export default function Dropdown() {
     return (
       <Menu as="div" className="relative ml-3">
         <div>
-          <Menu.Button className="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+          <Menu.Button className="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none">
             <span className="sr-only">Open user menu</span>
-            <p className='mr-2'>tommydanna@gmail.com</p>
+            <p className='mr-2 text-gray-300 hover:text-white'>{user ? user.email : undefined}</p>
             <ChevronDown />
           </Menu.Button>
         </div>

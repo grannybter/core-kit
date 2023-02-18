@@ -11,7 +11,7 @@
 }
 
 .link:focus {
-  @apply outline-none text-zinc-100 ring-2 ring-pink-500 ring-opacity-50;
+  @apply outline-none text-zinc-100;
 }
 
 .logo {
