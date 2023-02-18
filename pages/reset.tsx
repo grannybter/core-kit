@@ -28,7 +28,7 @@ const customTheme = {
       messageText: 'gray',
       messageTextDanger: 'red',
       anchorTextColor: 'gray',
-      anchorTextHoverColor: 'darkgray'
+      anchorTextHoverColor: 'darkgray',
     },
     space: {
       spaceSmall: '4px',
@@ -39,19 +39,19 @@ const customTheme = {
       emailInputSpacing: '4px',
       socialAuthSpacing: '4px',
       buttonPadding: '10px 15px',
-      inputPadding: '10px 15px'
+      inputPadding: '10px 15px',
     },
     fontSizes: {
       baseBodySize: '13px',
       baseInputSize: '14px',
       baseLabelSize: '14px',
-      baseButtonSize: '14px'
+      baseButtonSize: '14px',
     },
     fonts: {
       bodyFontFamily: `ui-sans-serif, sans-serif`,
       buttonFontFamily: `ui-sans-serif, sans-serif`,
       inputFontFamily: `ui-sans-serif, sans-serif`,
-      labelFontFamily: `ui-sans-serif, sans-serif`
+      labelFontFamily: `ui-sans-serif, sans-serif`,
     },
     // fontWeights: {},
     // lineHeights: {},
@@ -59,14 +59,14 @@ const customTheme = {
     // sizes: {},
     borderWidths: {
       buttonBorderWidth: '1px',
-      inputBorderWidth: '1px'
+      inputBorderWidth: '1px',
     },
     // borderStyles: {},
     radii: {
       borderRadiusButton: '4px',
       buttonBorderRadius: '4px',
-      inputBorderRadius: '4px'
-    }
+      inputBorderRadius: '4px',
+    },
     // shadows: {},
     // zIndices: {},
     // transitions: {},
@@ -84,9 +84,10 @@ const customTheme = {
       inputBorderHover: 'gray',
       inputBorderFocus: 'gray',
       inputText: 'white',
-      inputPlaceholder: 'darkgray'
-    }
-  }
+      inputPlaceholder: 'darkgray',
+    },
+  },
+  
 };
 
 const SignIn = () => {
@@ -104,15 +105,15 @@ const SignIn = () => {
     return (
       <>
         <div className="flex justify-center bg-gray-100 h-screen">
-          <div className="flex flex-col justify-between max-w-lg p-3 px-12 m-auto w-1/3 h-2/4 bg-white rounded-md shadow-xl">
+          <div className="flex flex-col justify-between max-w-lg p-3 px-12 m-auto w-1/3 h-1/3 bg-white rounded-md shadow-xl">
             <div className="flex py-4 text-2xl font-bold">
-              <span className="text-black">Sign in to your account</span>
+              <span className="text-black">Reset your password</span>
             </div>
 
             <div className="flex flex-col space-y-4">
               <Auth
                 supabaseClient={supabaseClient}
-                view="sign_in"
+                view="forgotten_password"
                 //providers={['google', 'github']}
                 //redirectTo={getURL()}
                 localization={{
@@ -121,30 +122,24 @@ const SignIn = () => {
                       email_label: 'Email',
                       password_label: 'Password',
                       email_input_placeholder: '',
-                      password_input_placeholder: ''
+                      password_input_placeholder: '',
+                      link_text: ""
                     },
                     forgotten_password: {
-                      link_text: ''
+                      email_input_placeholder: '',
+                      button_label: "Send reset password link",
                     },
-                    sign_up: {
-                      link_text: ''
-                    }
-                  }
-                }}
+                  },
+                }}            
                 magicLink={false}
                 appearance={{
-                  theme: customTheme
+                  theme: customTheme,
                 }}
                 theme="defualt"
               />
             </div>
             <div className='flex justify-center pb-1'>
-              <a href="/reset" className='text-black text-sm underline text-gray-400'>Forgot your password?</a>
-            </div>
-            <div className='flex justify-center pb-1'>
-              <span className='text-black text-sm'>
-                Dont have an account? <a href="/signup" className='text-black text-sm underline text-gray-400'>Sign up</a>
-              </span>
+              <a href="/signin" className='text-black text-sm underline text-gray-400'>Return to sign in</a>
             </div>
           </div>
         </div>

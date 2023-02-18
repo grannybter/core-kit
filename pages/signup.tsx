@@ -104,29 +104,26 @@ const SignIn = () => {
     return (
       <>
         <div className="flex justify-center bg-gray-100 h-screen">
-          <div className="flex flex-col justify-between max-w-lg p-3 px-12 m-auto w-1/3 h-2/4 bg-white rounded-md shadow-xl">
-            <div className="flex py-4 text-2xl font-bold">
-              <span className="text-black">Sign in to your account</span>
-            </div>
-
-            <div className="flex flex-col space-y-4">
+          <div className="flex flex-col justify-between max-w-lg p-3 px-12 m-auto w-1/3 h-[45%] bg-white rounded-md shadow-xl">
+            <div className="flex flex-col space-y-2">
+              <div className="flex text-2xl py-4 font-bold">
+                <span className="text-black">Create your account</span>
+              </div>
               <Auth
                 supabaseClient={supabaseClient}
-                view="sign_in"
+                view="sign_up"
                 //providers={['google', 'github']}
                 //redirectTo={getURL()}
                 localization={{
                   variables: {
-                    sign_in: {
+                    sign_up: {
                       email_label: 'Email',
                       password_label: 'Password',
                       email_input_placeholder: '',
-                      password_input_placeholder: ''
-                    },
-                    forgotten_password: {
+                      password_input_placeholder: '',
                       link_text: ''
                     },
-                    sign_up: {
+                    sign_in: {
                       link_text: ''
                     }
                   }
@@ -138,12 +135,15 @@ const SignIn = () => {
                 theme="defualt"
               />
             </div>
-            <div className='flex justify-center pb-1'>
-              <a href="/reset" className='text-black text-sm underline text-gray-400'>Forgot your password?</a>
-            </div>
-            <div className='flex justify-center pb-1'>
-              <span className='text-black text-sm'>
-                Dont have an account? <a href="/signup" className='text-black text-sm underline text-gray-400'>Sign up</a>
+            <div className="flex justify-center pb-1">
+              <span className="text-black text-sm">
+                Have an account?{' '}
+                <a
+                  href="/signin"
+                  className="text-black text-sm underline text-gray-400"
+                >
+                  Sign in
+                </a>
               </span>
             </div>
           </div>

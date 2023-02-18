@@ -22,7 +22,7 @@ export default function MyApp({ Component, pageProps, router }: AppProps) {
 
   //dashboard defualt layout
   
-  if (router.pathname === `/signin`) {
+  if (router.pathname === `/signin` || router.pathname === `/signup` || router.pathname === `/reset`) {
     return (
       <div className="bg-black">
         <SessionContextProvider supabaseClient={supabaseClient}>

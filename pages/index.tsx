@@ -1,10 +1,12 @@
 import Pricing from 'components/Pricing';
 import { Product } from 'types';
+import Hero from 'components/ui/Hero';
+import Footer from 'components/ui/Footer';
 
 export default function PricingPage() {
   return (
     <>
-      <div className='bg-white text-black border-black border-b-4 '>HOME</div>
+      <Hero/>
     </>
   )
 }
