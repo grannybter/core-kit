@@ -120,10 +120,14 @@ const SignIn = () => {
                     sign_in: {
                       email_label: 'Email',
                       password_label: 'Password',
+                      email_input_placeholder: '',
+                      password_input_placeholder: '',
                     },
                     sign_up:{
                       email_label: 'Email',
                       password_label: 'Password',
+                      email_input_placeholder: '',
+                      password_input_placeholder: '',
                     },
                   },
                 }}            
