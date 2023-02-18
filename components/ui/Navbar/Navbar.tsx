@@ -49,7 +49,6 @@ const Navbar = () => {
             {user ? (
               <a
               >
-                {/* <Dropdown/> */}
                 <Link href="/dashboard">
                 <a className="group inline-flex items-center rounded-full bg-slate-900 px-4 py-1.5 font-semibold text-white transition hover:bg-slate-700">
                   Dashboard
