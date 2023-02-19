@@ -3,10 +3,10 @@ import { Product } from 'types';
 import Hero from 'components/ui/Hero';
 import Footer from 'components/ui/Footer';
 
-export default function PricingPage() {
+export default function HomePage() {
   return (
     <>
-      <Hero/>
+      {/* <Hero/> */}
     </>
   )
 }
