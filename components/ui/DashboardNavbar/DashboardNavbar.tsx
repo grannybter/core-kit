@@ -16,11 +16,7 @@ function classNames(...classes: Array<string | undefined | null | false | 0>): s
   return classes.filter(Boolean).join(' ');
 }
 
-const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' },
-]
+
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
@@ -34,6 +30,17 @@ const DashboardNavbar = () => {
   const router = useRouter();
   const supabaseClient = useSupabaseClient();
   const { user } = useUser();
+
+  const userNavigation = [
+    { name: 'Account settings' , onclick: () => router.push('/dashboard/account')},
+    { name: 'Dashboard', onclick: () => router.push('/dashboard') },
+    {
+        name: 'Sign out', textColor: "text-red-700", onclick: async () => {
+            await supabaseClient.auth.signOut();
+            router.push('/signin');
+        }
+    },
+  ]
 
   return (
     <>
@@ -109,13 +116,13 @@ const DashboardNavbar = () => {
                   ))}
                 </div>
                 <div className="border-t border-gray-700 pt-4 pb-3">
-                  <Dropdown/>{/* replace with just email */}
+                <p className='pl-5 text-gray-300 hover:text-white'>{user ? user.email : undefined}</p>
                   <div className="mt-3 space-y-1 px-2">
                     {userNavigation.map((item) => (
                       <Disclosure.Button
                         key={item.name}
                         as="a"
-                        href={item.href}
+                        onClick={item.onclick}
                         className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                       >
                         {item.name}
