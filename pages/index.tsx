@@ -6,7 +6,7 @@ import Footer from 'components/ui/Footer';
 export default function HomePage() {
   return (
     <>
-      {/* <Hero/> */}
+      <Hero/> 
     </>
   )
 }
