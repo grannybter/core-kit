@@ -62,7 +62,7 @@ export default function Example() {
                   <Link href="/dashboard">
                     <a className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 font-semibold text-slate-700 transition hover:text-slate-400">
                       Live Demo
-                      <Arrow fill="#000"/>
+                      <Arrow/>
                     </a>
                   </Link>
                 </a>
