@@ -1,4 +1,4 @@
-const Arrow = () => (
+const Arrow = ({ className = '', ...props }) => (
   <svg
     className="mt-0.5 ml-2 -mr-1 stroke-white stroke-2"
     fill="none"

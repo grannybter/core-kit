@@ -1,3 +1,6 @@
+import Link from 'next/link';
+import Arrow from 'components/icons/Arrow';
+
 import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -8,7 +11,7 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className={s + "isolate bg-white"}>
+    <div className={s + 'isolate bg-white'}>
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
         <svg
           className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -33,40 +36,35 @@ export default function Example() {
             </linearGradient>
           </defs>
         </svg>
-      </div>    
+      </div>
       <main>
         <div className="relative px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-            <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-              <div className="relative rounded-full py-1 px-3 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                Announcing our next round of funding.{' '}
-                <a href="#" className="font-semibold text-indigo-600">
-                  <span className="absolute inset-0" aria-hidden="true" />
-                  Read more <span aria-hidden="true">&rarr;</span>
-                </a>
-              </div>
-            </div>
+          <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Data to enrich your online business
+                Simplify Your SaaS Development with Core Kit
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                fugiat aliqua.
+                Get your SaaS app up and running quickly with the ultimate SaaS
+                boilerplate. Streamline development and focus on your unique
+                value proposition with all essential features built-in.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a
-                  href="#"
-                  className="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Get started
+                <a>
+                  <Link href="/dashboard">
+                    <a className="group inline-flex items-center rounded-full bg-slate-900 px-4 py-1.5 font-semibold text-white transition hover:bg-slate-700">
+                      Get Started
+                      <Arrow />
+                    </a>
+                  </Link>
                 </a>
-                <a
-                  href="#"
-                  className="text-base font-semibold leading-7 text-gray-900"
-                >
-                  Learn more <span aria-hidden="true">→</span>
+                <a>
+                  <Link href="/dashboard">
+                    <a className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 font-semibold text-slate-700 transition hover:text-slate-400">
+                      Live Demo
+                      <Arrow fill="#000"/>
+                    </a>
+                  </Link>
                 </a>
               </div>
             </div>
