@@ -7,7 +7,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 import s from './Hero.module.css';
 
-export default function Example() {
+export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -50,22 +50,19 @@ export default function Example() {
                 value proposition with all essential features built-in.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a>
-                  <Link href="/dashboard">
-                    <a className="group inline-flex items-center rounded-full bg-slate-900 px-4 py-1.5 font-semibold text-white transition hover:bg-slate-700">
-                      Get Started
-                      <Arrow />
-                    </a>
-                  </Link>
-                </a>
-                <a>
-                  <Link href="/dashboard">
-                    <a className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 font-semibold text-slate-700 transition hover:text-slate-400">
-                      Live Demo
-                      <Arrow/>
-                    </a>
-                  </Link>
-                </a>
+                <Link href="/dashboard">
+                  <a className="group inline-flex items-center rounded-full bg-slate-900 px-4 py-1.5 font-semibold text-white transition hover:bg-slate-700">
+                    Get Started
+                    <Arrow />
+                  </a>
+                </Link>
+
+                <Link href="/dashboard">
+                  <a className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 font-semibold text-slate-700 transition hover:bg-gray-100">
+                    Live Demo
+                    <Arrow stroke="black"/>
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

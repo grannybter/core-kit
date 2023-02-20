@@ -1,11 +1,12 @@
 const Arrow = ({ className = '', ...props }) => (
   <svg
-    className="mt-0.5 ml-2 -mr-1 stroke-white stroke-2"
+    className="mt-0.5 ml-2 -mr-1 stroke-2 "
     fill="none"
     width="10"
     height="10"
     viewBox="0 0 10 10"
     aria-hidden="true"
+    stroke={props.stroke || "white"}
   >
     <path
       className="opacity-0 transition group-hover:opacity-100"
