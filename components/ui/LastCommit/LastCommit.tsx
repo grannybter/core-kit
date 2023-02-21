@@ -1,6 +1,48 @@
-import GitHub from "components/icons/GitHub";
+import { GetServerSideProps, NextPage } from 'next';
+import React from 'react';
+import axios from 'axios';
+import moment from 'moment';
+
+import GitHub from 'components/icons/GitHub';
+
+type Props = {
+  date: string;
+}
+
+const DatePage: NextPage<Props> = ({ date }) => {
+  const lastCommitDate = moment(date);
+  const formattedDate = lastCommitDate.fromNow();
+
+  return <div>Last commit {formattedDate}</div>;
+};
+
+export const getServerSideProps: GetServerSideProps<Props> = async (context) => {
+  const owner = "spazick";
+  const repo = "nextjs-subscription-starter";
+  const response = await axios.get(`https://api.github.com/repos/${owner}/${repo}/commits?per_page=1`, {
+    headers: {
+      Authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
+      Accept: 'application/vnd.github.v3+json'
+    }
+  });
+
+  const { commit: { author: { date } } } = response.data[0];
+  return { props: { date } };
+};
+
 
 export default function LastCommit() {
+  const [date, setDate] = React.useState("");
+
+  React.useEffect(() => {
+    async function getDate() {
+      const response = await fetch('/api/recent-commit');
+      const data = await response.json();
+      setDate(data.date);
+    }
+    getDate();
+  }, []);
+
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl py-2 sm:px-6 sm:py-0 lg:px-8">
@@ -29,7 +71,7 @@ export default function LastCommit() {
               <GitHub/> 
             </div>
             <h2 className="text-lg font-bold tracking-tight text-white sm:text-2xl">
-              Last commit 4 days ago
+              <DatePage date={date}/>
             </h2>
           </div>
         </div>
