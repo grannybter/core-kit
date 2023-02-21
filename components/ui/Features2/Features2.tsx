@@ -2,28 +2,60 @@ import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from
 
 const features = [
   {
-    name: 'Push to deploy',
+    name: 'Subscription Payments',
     description:
       'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
     icon: CloudArrowUpIcon,
+    class: 'h-6 w-6 text-white animate-none',
   },
   {
-    name: 'SSL certificates',
+    name: 'React & Tailwind UI',
     description:
       'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
     icon: LockClosedIcon,
+    class: 'h-6 w-6 text-white animate-none',
   },
   {
-    name: 'Simple queues',
+    name: 'Supabase Database',
     description:
       'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
     icon: ArrowPathIcon,
+    class: 'h-6 w-6 text-white animate-spin',
   },
   {
-    name: 'Advanced security',
+    name: 'Pre-built Components',
     description:
       'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
     icon: FingerPrintIcon,
+    class: 'h-6 w-6 text-white animate-pulse',
+  },
+  {
+    name: 'Lifetime Support',
+    description:
+      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
+    icon: ArrowPathIcon,
+    class: 'h-6 w-6 text-white animate-spin',
+  },
+  {
+    name: 'Authentication & Authorization',
+    description:
+      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
+    icon: FingerPrintIcon,
+    class: 'h-6 w-6 text-white animate-pulse',
+  },
+  {
+    name: 'Social Logins',
+    description:
+      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
+    icon: ArrowPathIcon,
+    class: 'h-6 w-6 text-white animate-spin',
+  },
+  {
+    name: 'Email Notifications',
+    description:
+      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
+    icon: FingerPrintIcon,
+    class: 'h-6 w-6 text-white animate-pulse',
   },
 ]
 
@@ -47,7 +79,7 @@ export default function Features2() {
               <div key={feature.name} className="relative pl-16">
                 <dt className="text-base font-semibold leading-7 text-gray-900">
                   <div className="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                    <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                    <feature.icon className={feature.class} aria-hidden="true" />
                   </div>
                   {feature.name}
                 </dt>

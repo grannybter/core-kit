@@ -20,6 +20,8 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Logo from 'components/icons/Logo'
 import Arrow from 'components/icons/Arrow'
 
+import { animateScroll as scroll, Link as L } from "react-scroll";
+
 import { useUser } from 'utils/useUser';
 
 const solutions = [
@@ -108,9 +110,9 @@ export default function Navbar() {
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
 
-            <a href="/#features" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <L to="features" activeClass="active" spy={true} smooth={true} offset={50} duration={700} className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer">
               Features
-            </a>
+            </L>
             <a href="/pricing" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Pricing
             </a>
