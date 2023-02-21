@@ -27,10 +27,10 @@ export default function CTA() {
           </svg>
           <div className="mx-auto text-center lg:mx-0 lg:flex-auto lg:py-32 pb-16">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Boost your productivity. Start using our app today.
+              Accelerate your production time. Start using Core Kit today.
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Get months worth of work done in minutes
+              Get months worth of work done in minutes.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link href="/dashboard">

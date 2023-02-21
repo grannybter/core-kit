@@ -4,56 +4,56 @@ const features = [
   {
     name: 'Subscription Payments',
     description:
-      'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
+      'Charge your customers on a recurring basis for your services or products.',
     icon: CloudArrowUpIcon,
     class: 'h-6 w-6 text-white animate-none',
   },
   {
-    name: 'React & Tailwind UI',
+    name: 'Next.js & Tailwind UI',
     description:
-      'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
+      'Create lightning-fast web applications with ease by combining the power of the Next.js framework with the customizable components of Tailwind UI.',
     icon: LockClosedIcon,
     class: 'h-6 w-6 text-white animate-none',
   },
   {
     name: 'Supabase Database',
     description:
-      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
+      'Use Supabase Database to create a high-performance backend that can handle large amounts of data.',
     icon: ArrowPathIcon,
     class: 'h-6 w-6 text-white animate-spin',
   },
   {
     name: 'Pre-built Components',
     description:
-      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
+      'Speed up your development process by accessing pre-built components.',
     icon: FingerPrintIcon,
     class: 'h-6 w-6 text-white animate-pulse',
   },
   {
-    name: 'Lifetime Support',
-    description:
-      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
-    icon: ArrowPathIcon,
-    class: 'h-6 w-6 text-white animate-spin',
-  },
-  {
     name: 'Authentication & Authorization',
     description:
-      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
+      'Implement secure access controls on your website, so only authorized users can access certain areas or features.',
     icon: FingerPrintIcon,
     class: 'h-6 w-6 text-white animate-pulse',
   },
   {
     name: 'Social Logins',
     description:
-      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
+      'Make sign-up easy for your users by allowing them to use their social media accounts to register for your website.',
     icon: ArrowPathIcon,
     class: 'h-6 w-6 text-white animate-spin',
   },
   {
     name: 'Email Notifications',
     description:
-      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
+      'Keep your users in the loop by sending them email notifications about important updates or events.',
+    icon: FingerPrintIcon,
+    class: 'h-6 w-6 text-white animate-pulse',
+  },
+  {
+    name: 'Automatic syncing',
+    description:
+      'Automatically sync pricing plans and subscription statuses via Stripe webhooks',
     icon: FingerPrintIcon,
     class: 'h-6 w-6 text-white animate-pulse',
   },
@@ -69,8 +69,7 @@ export default function Features2() {
             Everything you need to deploy your app
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-            pulvinar et feugiat blandit at. In mi viverra elit nunc.
+          Get your app up and running quickly with our comprehensive deployment toolkit, which includes everything you need to successfully deploy your application to a production environment.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
