@@ -45,7 +45,7 @@ export default function Hero() {
                 Simplify Your SaaS Development with Core Kit
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Get your SaaS app up and running quickly with the ultimate SaaS
+                Get your SaaS app up and running in no time with the ultimate SaaS
                 boilerplate. Streamline development and focus on your unique
                 value proposition with all essential features built-in.
               </p>

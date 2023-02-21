@@ -1,61 +1,53 @@
-import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
+import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon, CreditCardIcon, TableCellsIcon, CubeTransparentIcon, BellAlertIcon, UserPlusIcon } from '@heroicons/react/24/outline'
 
 const features = [
   {
     name: 'Subscription Payments',
     description:
       'Charge your customers on a recurring basis for your services or products.',
-    icon: CloudArrowUpIcon,
-    class: 'h-6 w-6 text-white animate-none',
+    icon: CreditCardIcon,
   },
   {
     name: 'Next.js & Tailwind UI',
     description:
       'Create lightning-fast web applications with ease by combining the power of the Next.js framework with the customizable components of Tailwind UI.',
     icon: LockClosedIcon,
-    class: 'h-6 w-6 text-white animate-none',
-  },
-  {
-    name: 'Supabase Database',
-    description:
-      'Use Supabase Database to create a high-performance backend that can handle large amounts of data.',
-    icon: ArrowPathIcon,
-    class: 'h-6 w-6 text-white animate-spin',
   },
   {
     name: 'Pre-built Components',
     description:
       'Speed up your development process by accessing pre-built components.',
-    icon: FingerPrintIcon,
-    class: 'h-6 w-6 text-white animate-pulse',
+    icon: CubeTransparentIcon,
+  },
+  {
+    name: 'Supabase Database',
+    description:
+      'Use Supabase Database to create a high-performance backend that can handle large amounts of data.',
+    icon: TableCellsIcon,
   },
   {
     name: 'Authentication & Authorization',
     description:
       'Implement secure access controls on your website, so only authorized users can access certain areas or features.',
     icon: FingerPrintIcon,
-    class: 'h-6 w-6 text-white animate-pulse',
   },
   {
     name: 'Social Logins',
     description:
       'Make sign-up easy for your users by allowing them to use their social media accounts to register for your website.',
-    icon: ArrowPathIcon,
-    class: 'h-6 w-6 text-white animate-spin',
+    icon: UserPlusIcon,
   },
   {
     name: 'Email Notifications',
     description:
       'Keep your users in the loop by sending them email notifications about important updates or events.',
-    icon: FingerPrintIcon,
-    class: 'h-6 w-6 text-white animate-pulse',
+    icon: BellAlertIcon,
   },
   {
     name: 'Automatic syncing',
     description:
       'Automatically sync pricing plans and subscription statuses via Stripe webhooks',
-    icon: FingerPrintIcon,
-    class: 'h-6 w-6 text-white animate-pulse',
+    icon: ArrowPathIcon,
   },
 ]
 
@@ -78,7 +70,7 @@ export default function Features2() {
               <div key={feature.name} className="relative pl-16">
                 <dt className="text-base font-semibold leading-7 text-gray-900">
                   <div className="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                    <feature.icon className={feature.class} aria-hidden="true" />
+                    <feature.icon className='h-6 w-6 text-white' aria-hidden="true" />
                   </div>
                   {feature.name}
                 </dt>
