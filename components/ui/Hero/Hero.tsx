@@ -11,7 +11,7 @@ export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className={s + 'isolate bg-white'}>
+    <div className='isolate bg-white'>
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
         <svg
           className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -46,20 +46,19 @@ export default function Hero() {
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
                 Get your SaaS app up and running in no time with the ultimate SaaS
-                boilerplate. Streamline development and focus on your unique
-                value proposition with all essential features built-in.
+                boilerplate. Streamline development and focus on building your app instead of working on tedious standard features.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Link href="/dashboard">
                   <a className="group inline-flex items-center rounded-full bg-slate-900 px-4 py-1.5 font-semibold text-white transition hover:bg-slate-700">
-                    Get Started
+                    Try it out
                     <Arrow />
                   </a>
                 </Link>
 
-                <Link href="/dashboard">
+                <Link href="https://github.com/spazick">
                   <a className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 font-semibold text-slate-700 transition hover:bg-gray-100">
-                    Live Demo
+                    Get Code
                     <Arrow stroke="black"/>
                   </a>
                 </Link>

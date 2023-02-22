@@ -60,7 +60,7 @@ const DashboardNavbar = () => {
                       <img
                         className="h-8 w-8"
                         src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                        alt="Your Company"
+                        alt="Core Kit"
                       />
                     </div>
                     <div className="hidden md:block">
