@@ -1,9 +1,6 @@
 import { withPageAuth } from '@supabase/auth-helpers-nextjs';
 
 import DummyLineChart from '@/components/ui/Charts/LineChart';
-import DummyPieChart from '@/components/ui/Charts/PieChart/PieChart';
-import DummyBarChart from '@/components/ui/Charts/BarChart/BarChart';
-import DummyRadarChart from '@/components/ui/Charts/RadarChart/RadarChart';
 
 export const getServerSideProps = withPageAuth({ redirectTo: '/signin' });
 
@@ -19,9 +16,8 @@ export default function Dashboard() {
         <main className='bg-white'>
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
           <DummyLineChart/>
-          <DummyRadarChart/>
-          <DummyBarChart/>
-          <DummyPieChart/>
+          <DummyLineChart/>
+          <DummyLineChart/>
           </div>
         </main>
       </div>

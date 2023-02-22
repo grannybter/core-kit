@@ -19,11 +19,9 @@ function classNames(
 }
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-  { name: 'Reports', href: '#', current: false }
+  { name: 'Dashboard', href: '/dashboard', current: false },
+  { name: 'Leads', href: '/dashboard/leads', current: false },
+  { name: 'Calendar', href: '/dashboard/calandar', current: false },
 ];
 
 const DashboardNavbar = () => {
@@ -57,11 +55,7 @@ const DashboardNavbar = () => {
                 <div className="flex h-16 items-center justify-between">
                   <div className="flex items-center">
                     <div className="flex-shrink-0">
-                      <img
-                        className="h-8 w-8"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                        alt="Core Kit"
-                      />
+                      <Logo />
                     </div>
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
