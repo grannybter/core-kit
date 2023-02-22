@@ -1,5 +1,10 @@
 import { withPageAuth } from '@supabase/auth-helpers-nextjs';
 
+import DummyLineChart from '@/components/ui/Charts/LineChart';
+import DummyPieChart from '@/components/ui/Charts/PieChart/PieChart';
+import DummyBarChart from '@/components/ui/Charts/BarChart/BarChart';
+import DummyRadarChart from '@/components/ui/Charts/RadarChart/RadarChart';
+
 export const getServerSideProps = withPageAuth({ redirectTo: '/signin' });
 
 export default function Dashboard() {
@@ -11,13 +16,12 @@ export default function Dashboard() {
             <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
           </div>
         </header>
-        <main>
+        <main className='bg-white'>
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-            {/* replace w content */}
-            <div className="px-4 py-6 sm:px-0">
-              <div className="h-96 rounded-lg border-4 border-dashed border-gray-200" />
-            </div>
-            {/* end replace */}
+          <DummyLineChart/>
+          <DummyRadarChart/>
+          <DummyBarChart/>
+          <DummyPieChart/>
           </div>
         </main>
       </div>
