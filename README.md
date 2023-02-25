@@ -5,7 +5,7 @@ Get your SaaS app up and running in no time with the ultimate SaaS boilerplate. 
 ## Features
 
 - Subscription Payments - Charge your customers on a recurring basis for your services or products.
-- Next.js & Tailwind UI - Create lightning-fast web applications with ease by combining the power of the Next.js framework with the customizable components of Tailwind UI.
+- Next.js & Tailwind UI - Create lightning-fast web applications with ease by combining the power of the [Next.js](https://nextjs.org/) framework with the customizable components of [Tailwind UI](https://tailwindcss.com/).
 - Pre-built Components - Speed up your development process by accessing pre-built components.
 - Supabase Database - Use Supabase Database to create a high-performance backend that can handle large amounts of data.
 - Authentication & Authorization - Implement secure access controls on your website with [Supabase](https://supabase.com/docs/guides/auth/overview), so only authorized users can access certain areas or features.
@@ -21,7 +21,7 @@ Get your SaaS app up and running in no time with the ultimate SaaS boilerplate. 
 
 ## Architecture
 
-![Architecture diagram](./public/architecture_diagram.svg)
+![Architecture diagram](./public/arch.png)
 
 ## Deploy with Vercel
 
