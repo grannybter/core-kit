@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Core Kit SaaS boilerplate
+=======
+# Core Kit SaaS Boilerplate
+>>>>>>> 0bfce005a55c3980c9765e3d8d1a925f4534b3bb
 
 The all-in-one starter kit for high-performance SaaS applications.
 
