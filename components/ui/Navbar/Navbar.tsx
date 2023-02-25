@@ -28,6 +28,7 @@ import Arrow from 'components/icons/Arrow';
 import { animateScroll as scroll, Link as L } from 'react-scroll';
 
 import { useUser } from 'utils/useUser';
+import { useRouter } from 'next/router'
 
 const resources = [
   {
@@ -69,6 +70,7 @@ function classNames(
 
 export default function Navbar() {
   const { user } = useUser();
+  const router = useRouter()
 
   return (
     <Popover className="relative bg-transparent z-20">
@@ -95,9 +97,15 @@ export default function Navbar() {
               offset={50}
               duration={700}
               className="text-base font-medium text-mainblack hover:text-mainblack/70 cursor-pointer"
+              onClick={() => {
+                if (router.pathname !== "/") {
+                  router.push("/#features")
+                }
+              }}
             >
               Features
             </L>
+
             <a
               href="/pricing"
               className="text-base font-medium text-mainblack hover:text-mainblack/70"

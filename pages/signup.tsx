@@ -10,8 +10,8 @@ import { Auth, ThemeSupa, ThemeMinimal } from '@supabase/auth-ui-react';
 const customTheme = {
   default: {
     colors: {
-      brand: 'hsl(153 60.0% 53.0%)',
-      brandAccent: 'hsl(154 54.8% 45.1%)',
+      brand: 'rgba(28, 28, 28, 1)',
+      brandAccent: 'rgba(28, 28, 28, .7)',
       brandButtonText: 'white',
       defaultButtonBackground: 'white',
       defaultButtonBackgroundHover: '#eaeaea',
@@ -103,7 +103,7 @@ const SignIn = () => {
   if (!user)
     return (
       <>
-        <div className="flex justify-center bg-gray-100 h-screen">
+        <div className="flex justify-center h-screen">
           <div className="flex flex-col justify-between max-w-xl p-3 px-12 m-auto w-full h-fit mx-2 sm:mx-0 bg-white rounded-md shadow-xl">
             <div className="flex flex-col space-y-2">
               <div className="flex text-2xl py-4 font-bold">
@@ -140,7 +140,7 @@ const SignIn = () => {
                 Have an account?{' '}
                 <a
                   href="/signin"
-                  className="text-black text-sm underline text-gray-400"
+                  className="text-sm underline text-gray-400"
                 >
                   Sign in
                 </a>

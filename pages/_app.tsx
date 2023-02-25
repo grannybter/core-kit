@@ -24,7 +24,7 @@ export default function MyApp({ Component, pageProps, router }: AppProps) {
   
   if (router.pathname === `/signin` || router.pathname === `/signup` || router.pathname === `/reset`) {
     return (
-      <div className="bg-black">
+      <div className="bg-mainwhite">
         <SessionContextProvider supabaseClient={supabaseClient}>
           <MyUserContextProvider>
               <Component {...pageProps} />
@@ -35,7 +35,7 @@ export default function MyApp({ Component, pageProps, router }: AppProps) {
   }
   else if (router.pathname.includes(`/dashboard`)) {
     return (
-      <div className="bg-black">
+      <div className="bg-mainwhite">
         <SessionContextProvider supabaseClient={supabaseClient}>
           <MyUserContextProvider>
             <DashboardLayout>
