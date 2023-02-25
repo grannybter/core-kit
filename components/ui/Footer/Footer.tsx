@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="mt-16 flex items-center justify-center space-x-4 text-sm font-semibold leading-6 text-slate-700">
           <a href="/">Home</a>
           <div className="h-4 w-px bg-slate-500/20"></div>
-          <a href="/changelog">Github</a>
+          <a href="https://github.com/spazick/core-kit" target="_blank">Github</a>
         </div>
       </div>
     </footer>

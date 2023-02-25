@@ -32,7 +32,7 @@ export default function Hero() {
                 </Link>
 
                 <Link href="https://github.com/spazick/core-kit">
-                  <a className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 font-semibold text-slate-700 transition hover:bg-gray-100">
+                  <a target="_blank" className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 font-semibold text-slate-700 transition hover:bg-gray-100">
                     Get Code
                     <Arrow stroke="black"/>
                   </a>
