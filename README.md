@@ -1,13 +1,17 @@
 # Core Kit SaaS boilerplate
 
-The all-in-one starter kit for high-performance SaaS applications.
+Get your SaaS app up and running in no time with the ultimate SaaS boilerplate. Streamline development and focus on building your app instead of working on tedious standard features.
 
 ## Features
 
-- Secure user management and authentication with [Supabase](https://supabase.io/docs/guides/auth)
-- Powerful data access & management tooling on top of PostgreSQL with [Supabase](https://supabase.io/docs/guides/database)
-- Integration with [Stripe Checkout](https://stripe.com/docs/payments/checkout) and the [Stripe customer portal](https://stripe.com/docs/billing/subscriptions/customer-portal)
-- Automatic syncing of pricing plans and subscription statuses via [Stripe webhooks](https://stripe.com/docs/webhooks)
+- Subscription Payments - Charge your customers on a recurring basis for your services or products.
+- Next.js & Tailwind UI - Create lightning-fast web applications with ease by combining the power of the Next.js framework with the customizable components of Tailwind UI.
+- Pre-built Components - Speed up your development process by accessing pre-built components.
+- Supabase Database - Use Supabase Database to create a high-performance backend that can handle large amounts of data.
+- Authentication & Authorization - Implement secure access controls on your website with [Supabase](https://supabase.com/docs/guides/auth/overview), so only authorized users can access certain areas or features.
+- Automatic syncing - Automatically sync pricing plans and subscription statuses via [Stripe webhooks](https://stripe.com/docs/webhooks)
+- Social Logins - Make sign-up easy for your users by allowing them to use their social media accounts to register for your website.
+- Email Notifications - Keep your users in the loop by sending them email notifications about important updates or events.
 
 ## Demo
 
