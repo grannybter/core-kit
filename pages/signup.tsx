@@ -10,8 +10,8 @@ import { Auth, ThemeSupa, ThemeMinimal } from '@supabase/auth-ui-react';
 const customTheme = {
   default: {
     colors: {
-      brand: 'rgba(28, 28, 28, 1)',
-      brandAccent: 'rgba(28, 28, 28, .7)',
+      brand: '#296eb4',
+      brandAccent: '#3687d9',
       brandButtonText: 'white',
       defaultButtonBackground: 'white',
       defaultButtonBackgroundHover: '#eaeaea',

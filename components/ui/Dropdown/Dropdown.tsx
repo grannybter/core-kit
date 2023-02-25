@@ -29,7 +29,7 @@ export default function Dropdown() {
     return (
       <Menu as="div" className="relative ml-3">
         <div>
-          <Menu.Button className="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none">
+          <Menu.Button className="flex max-w-xs items-center rounded-full bg-mainblack text-sm focus:outline-none">
             <span className="sr-only">Open user menu</span>
             <p className='mr-2 text-gray-300 hover:text-white'>{user ? user.email : undefined}</p>
             <ChevronDown />
