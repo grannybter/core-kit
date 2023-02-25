@@ -25,12 +25,12 @@ export default function Features() {
   const sectionRef = useRef(null);
 
   return (
-    <div className="overflow-hidden bg-white py-24 sm:py-32" ref={sectionRef}>
+    <div className="overflow-hidden bg-mainwhite py-24 sm:py-32" ref={sectionRef}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-lg">
-              <h2 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">Accelerate your time-to-market</h2>
+              <h2 className="text-lg font-semibold leading-8 tracking-tight text-azul">Accelerate your time-to-market</h2>
               <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">A better workflow</p>
               <p className="mt-6 text-lg leading-8 text-gray-600">
               Optimize your development process with our streamlined workflow, designed to increase efficiency, reduce errors, and enhance collaboration across your team.
@@ -39,7 +39,7 @@ export default function Features() {
                 {features.map((feature) => (
                   <div key={feature.name} className="relative pl-9">
                     <dt className="inline font-semibold text-gray-900">
-                      <feature.icon className="absolute top-1 left-1 h-5 w-5 text-indigo-600" aria-hidden="true" />
+                      <feature.icon className="absolute top-1 left-1 h-5 w-5 text-azul" aria-hidden="true" />
                       {feature.name}
                     </dt>{' '}
                     <dd className="inline">{feature.description}</dd>

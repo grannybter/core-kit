@@ -104,7 +104,7 @@ const SignIn = () => {
     return (
       <>
         <div className="flex justify-center bg-gray-100 h-screen">
-          <div className="flex flex-col justify-between max-w-lg p-3 px-12 m-auto w-1/3 h-[45%] bg-white rounded-md shadow-xl">
+          <div className="flex flex-col justify-between max-w-xl p-3 px-12 m-auto w-full h-fit mx-2 sm:mx-0 bg-white rounded-md shadow-xl">
             <div className="flex flex-col space-y-2">
               <div className="flex text-2xl py-4 font-bold">
                 <span className="text-black">Create your account</span>

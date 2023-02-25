@@ -9,7 +9,7 @@ export default function LogoCloud() {
   */
 
   return (
-    <div className="bg-white py-12 sm:py-16">
+    <div className="bg-mainwhite py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
           POWERED BY
@@ -44,8 +44,8 @@ export default function LogoCloud() {
             height={48}
           />
           <img
-            className="col-span-2 col-start-2 max-h-16 w-full object-contain sm:col-start-auto lg:col-span-1"
-            src="https://logovtor.com/wp-content/uploads/2020/10/vercel-inc-logo-vector.png"
+            className="col-span-2 col-start-2 max-h-8 w-full object-contain sm:col-start-auto lg:col-span-1"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Vercel_logo_black.svg/2560px-Vercel_logo_black.svg.png"
             alt="Statamic"
             width={158}
             height={48}

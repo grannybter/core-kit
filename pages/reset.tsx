@@ -105,7 +105,7 @@ const SignIn = () => {
     return (
       <>
         <div className="flex justify-center bg-gray-100 h-screen">
-          <div className="flex flex-col justify-between max-w-lg p-3 px-12 m-auto w-1/3 h-1/3 bg-white rounded-md shadow-xl">
+          <div className="flex flex-col justify-between max-w-xl p-3 px-12 m-auto w-full h-fit mx-2 sm:mx-0 bg-white rounded-md shadow-xl">
             <div className="flex py-4 text-2xl font-bold">
               <span className="text-black">Reset your password</span>
             </div>

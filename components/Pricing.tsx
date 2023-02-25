@@ -121,7 +121,7 @@ export default function Pricing({ products }: Props) {
                 className={cn(
                   'rounded-lg shadow-sm divide-y divide-zinc-600 bg-zinc-900',
                   {
-                    'border border-indigo-600': product.name === subscription?.prices?.products?.name
+                    'border border-azul': product.name === subscription?.prices?.products?.name
                   }
                 )}
               >

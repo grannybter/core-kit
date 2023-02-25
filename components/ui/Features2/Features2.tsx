@@ -53,10 +53,10 @@ const features = [
 
 export default function Features2() {
   return (
-    <div className="bg-white py-24 sm:py-32" id='features'>
+    <div className="bg-mainwhite py-24 sm:py-32" id='features'>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">Deploy faster</h2>
+          <h2 className="text-lg font-semibold leading-8 tracking-tight text-azul">Deploy faster</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Everything you need to deploy your app
           </p>
@@ -69,7 +69,7 @@ export default function Features2() {
             {features.map((feature) => (
               <div key={feature.name} className="relative pl-16">
                 <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                  <div className="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-azul">
                     <feature.icon className='h-6 w-6 text-white' aria-hidden="true" />
                   </div>
                   {feature.name}

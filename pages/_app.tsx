@@ -49,7 +49,7 @@ export default function MyApp({ Component, pageProps, router }: AppProps) {
   //landing page default layout
   else {
     return (
-      <div className="bg-black">
+      <div className="bg-mainwhite">
         <SessionContextProvider supabaseClient={supabaseClient}>
           <MyUserContextProvider>
             <Layout>
