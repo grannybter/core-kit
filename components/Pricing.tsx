@@ -70,9 +70,6 @@ export default function Pricing({ products }: Props) {
     <section className="bg-black">
       <div className="max-w-6xl mx-auto py-8 sm:py-14 px-4 sm:px-6 lg:px-8">
         <div className="sm:flex sm:flex-col sm:align-center">
-          <p className="mt-1 text-lg text-gray-500 sm:text-center sm:text-xl max-w-2xl m-auto pb-4">
-            *This boilerplate is 100% free. This is just the pricing page demo*
-          </p>
           <p className="mt-1 text-md text-gray-500 sm:text-center sm:text-lg max-w-2xl m-auto pb-4">
               Try purchasing a subscription plan with this test card: 4242 4242 4242 4242. You can use any future date for the expiration date and any 3 digits for the CVC.
             </p>
