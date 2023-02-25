@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const owner = "spazick";
-    const repo = "nextjs-subscription-starter";
+    const repo = "core-kit";
     const response = await axios.get(`https://api.github.com/repos/${owner}/${repo}/commits?per_page=1`, {
       headers: {
         Authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
