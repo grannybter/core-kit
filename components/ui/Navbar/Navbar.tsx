@@ -57,9 +57,9 @@ const resources = [
   }
 ];
 const recentQuestions = [
-  { id: 1, name: 'What is supabase?', href: 'https://github.com/spazick/core-kit#faq' },
-  { id: 2, name: 'What stack is this boilerplate built in?', href: 'https://github.com/spazick/core-kit#faq' },
-  { id: 3, name: 'Is this free?', href: 'https://github.com/spazick/core-kit#faq' }
+  { id: 1, name: 'What is the licensing agreement for this boilerplate?', href: 'https://github.com/spazick/core-kit#faq' },
+  { id: 2, name: 'How do I set up my environment?', href: 'https://github.com/spazick/core-kit#faq' },
+  { id: 3, name: 'Can I use this boilerplate for commercial purposes?', href: 'https://github.com/spazick/core-kit#faq' }
 ];
 
 function classNames(

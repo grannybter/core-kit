@@ -59,7 +59,7 @@ Learn how to setup Core Kit in [Setup](Setup.md)
 
 - **What is the best way to get support if I have a question or issue?**
 
-  Create a new [issue](https://github.com/spazick/core-kit/issues)
+  Create a new [issue](https://github.com/spazick/core-kit/issues).
 
 - **Can I deploy my SaaS app to any hosting provider?**
 
