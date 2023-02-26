@@ -2,6 +2,10 @@
 
 Get your SaaS app up and running in no time with the ultimate SaaS boilerplate. Streamline development and focus on building your app instead of working on tedious standard features.
 
+## Setup
+
+Learn how to setup Core Kit in [Setup](Setup.md)
+
 ## Features
 
 - **Subscription Payments** - Charge your customers on a recurring basis for your services or products.
@@ -22,10 +26,6 @@ Get your SaaS app up and running in no time with the ultimate SaaS boilerplate. 
 ## Architecture
 
 ![Architecture diagram](./public/arch.png)
-
-## Setup
-
-Learn how to setup Core Kit in [Setup](Setup.md)
 
 ## FAQ
 
