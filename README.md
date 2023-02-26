@@ -26,3 +26,5 @@ Get your SaaS app up and running in no time with the ultimate SaaS boilerplate. 
 ## Setup
 
 Learn how to setup Core Kit in [Setup](Setup.md)
+
+## FAQ

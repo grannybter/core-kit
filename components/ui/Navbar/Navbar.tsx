@@ -34,32 +34,32 @@ const resources = [
   {
     name: 'Customer Support',
     description: 'Get all of your questions answered in our forums on Github.',
-    href: '#',
+    href: 'https://github.com/spazick/core-kit/issues',
     icon: ClipboardDocumentIcon
   },
   {
     name: 'Setup Guide',
     description: 'Learn how to setup your project.',
-    href: '#',
+    href: 'https://github.com/spazick/core-kit/blob/main/Setup.md',
     icon: WrenchScrewdriverIcon
   },
   {
     name: 'Github Repository',
     description: 'View codebase on Github.',
-    href: '#',
+    href: 'https://github.com/spazick/core-kit',
     icon: ArchiveBoxIcon
   },
   {
     name: 'FAQ',
     description: "Got questions? We've got answers.",
-    href: '#',
+    href: "https://github.com/spazick/core-kit#faq",
     icon: QuestionMarkCircleIcon
   }
 ];
 const recentQuestions = [
-  { id: 1, name: 'What is supabase?', href: '#' },
-  { id: 2, name: 'What stack is this boilerplate built in?', href: '#' },
-  { id: 3, name: 'Is this free?', href: '#' }
+  { id: 1, name: 'What is supabase?', href: 'https://github.com/spazick/core-kit#faq' },
+  { id: 2, name: 'What stack is this boilerplate built in?', href: 'https://github.com/spazick/core-kit#faq' },
+  { id: 3, name: 'Is this free?', href: 'https://github.com/spazick/core-kit#faq' }
 ];
 
 function classNames(
@@ -149,6 +149,7 @@ export default function Navbar() {
                               key={item.name}
                               href={item.href}
                               className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                              target="_blank"
                             >
                               <item.icon
                                 className="h-6 w-6 flex-shrink-0 text-azul"
@@ -179,6 +180,7 @@ export default function Navbar() {
                                   <a
                                     href={post.href}
                                     className="font-medium text-gray-900 hover:text-gray-700"
+                                    target="_blank"
                                   >
                                     {post.name}
                                   </a>
@@ -188,8 +190,9 @@ export default function Navbar() {
                           </div>
                           <div className="mt-5 text-sm">
                             <a
-                              href="#"
+                              href="https://github.com/spazick/core-kit#faq"
                               className="font-medium text-azul hover:text-azul/70"
+                              target="_blank"
                             >
                               View FAQ
                               <span aria-hidden="true"> &rarr;</span>
