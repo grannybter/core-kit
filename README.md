@@ -39,11 +39,11 @@ Learn how to setup Core Kit in [Setup](Setup.md)
 
 - **What features are included in this boilerplate?**
 
-  [Features](https://github.com/spazick/core-kit#features)
+  [Features](https://github.com/grannybter/core-kit#features)
 
 - **What is the licensing agreement for this boilerplate?**
 
-  [MIT License](https://github.com/spazick/core-kit/blob/main/LICENSE). Use it however you want.
+  [MIT License](https://github.com/grannybter/core-kit/blob/main/LICENSE). Use it however you want.
 
 - **Can I use this boilerplate for commercial purposes?**
 
@@ -59,7 +59,7 @@ Learn how to setup Core Kit in [Setup](Setup.md)
 
 - **What is the best way to get support if I have a question or issue?**
 
-  Create a new [issue](https://github.com/spazick/core-kit/issues).
+  Create a new [issue](https://github.com/grannybter/core-kit/issues).
 
 - **Can I deploy my SaaS app to any hosting provider?**
 

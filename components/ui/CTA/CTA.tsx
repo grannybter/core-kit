@@ -40,7 +40,7 @@ export default function CTA() {
                 </a>
               </Link>
 
-              <Link href="https://github.com/spazick/core-kit">
+              <Link href="https://github.com/grannybter/core-kit">
                 <a target="_blank" className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 font-semibold text-white transition hover:bg-gray-100 hover:bg-opacity-10">
                   Get Code
                   <Arrow/>

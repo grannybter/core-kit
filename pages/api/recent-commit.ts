@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    const owner = "spazick";
+    const owner = "grannybter";
     const repo = "core-kit";
     const response = await axios.get(`https://api.github.com/repos/${owner}/${repo}/commits?per_page=1`, {
       headers: {

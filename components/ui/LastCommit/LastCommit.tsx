@@ -17,7 +17,7 @@ const DatePage: NextPage<Props> = ({ date }) => {
 };
 
 export const getServerSideProps: GetServerSideProps<Props> = async (context) => {
-  const owner = "spazick";
+  const owner = "grannybter";
   const repo = "core-kit";
   const response = await axios.get(`https://api.github.com/repos/${owner}/${repo}/commits?per_page=1`, {
     headers: {

@@ -34,32 +34,32 @@ const resources = [
   {
     name: 'Customer Support',
     description: 'Get all of your questions answered in our forums on Github.',
-    href: 'https://github.com/spazick/core-kit/issues',
+    href: 'https://github.com/grannybter/core-kit/issues',
     icon: ClipboardDocumentIcon
   },
   {
     name: 'Setup Guide',
     description: 'Learn how to setup your project.',
-    href: 'https://github.com/spazick/core-kit/blob/main/Setup.md',
+    href: 'https://github.com/grannybter/core-kit/blob/main/Setup.md',
     icon: WrenchScrewdriverIcon
   },
   {
     name: 'Github Repository',
     description: 'View codebase on Github.',
-    href: 'https://github.com/spazick/core-kit',
+    href: 'https://github.com/grannybter/core-kit',
     icon: ArchiveBoxIcon
   },
   {
     name: 'FAQ',
     description: "Got questions? We've got answers.",
-    href: "https://github.com/spazick/core-kit#faq",
+    href: "https://github.com/grannybter/core-kit#faq",
     icon: QuestionMarkCircleIcon
   }
 ];
 const recentQuestions = [
-  { id: 1, name: 'What is the licensing agreement for this boilerplate?', href: 'https://github.com/spazick/core-kit#faq' },
-  { id: 2, name: 'How do I set up my environment?', href: 'https://github.com/spazick/core-kit#faq' },
-  { id: 3, name: 'Can I use this boilerplate for commercial purposes?', href: 'https://github.com/spazick/core-kit#faq' }
+  { id: 1, name: 'What is the licensing agreement for this boilerplate?', href: 'https://github.com/grannybter/core-kit#faq' },
+  { id: 2, name: 'How do I set up my environment?', href: 'https://github.com/grannybter/core-kit#faq' },
+  { id: 3, name: 'Can I use this boilerplate for commercial purposes?', href: 'https://github.com/grannybter/core-kit#faq' }
 ];
 
 function classNames(
@@ -190,7 +190,7 @@ export default function Navbar() {
                           </div>
                           <div className="mt-5 text-sm">
                             <a
-                              href="https://github.com/spazick/core-kit#faq"
+                              href="https://github.com/grannybter/core-kit#faq"
                               className="font-medium text-azul hover:text-azul/70"
                               target="_blank"
                             >
