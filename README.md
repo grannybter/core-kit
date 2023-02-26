@@ -4,14 +4,14 @@ Get your SaaS app up and running in no time with the ultimate SaaS boilerplate. 
 
 ## Features
 
-- Subscription Payments - Charge your customers on a recurring basis for your services or products.
-- Next.js & Tailwind UI - Create lightning-fast web applications with ease by combining the power of the [Next.js](https://nextjs.org/) framework with the customizable components of [Tailwind UI](https://tailwindcss.com/).
-- Pre-built Components - Speed up your development process by accessing pre-built components.
-- Supabase Database - Use Supabase Database to create a high-performance backend that can handle large amounts of data.
-- Authentication & Authorization - Implement secure access controls on your website with [Supabase](https://supabase.com/docs/guides/auth/overview), so only authorized users can access certain areas or features.
-- Automatic syncing - Automatically sync pricing plans and subscription statuses via [Stripe webhooks](https://stripe.com/docs/webhooks)
-- Social Logins - Make sign-up easy for your users by allowing them to use their social media accounts to register for your website.
-- Email Notifications - Keep your users in the loop by sending them email notifications about important updates or events.
+- **Subscription Payments** - Charge your customers on a recurring basis for your services or products.
+- **Next.js & Tailwind UI** - Create lightning-fast web applications with ease by combining the power of the [Next.js](https://nextjs.org/) framework with the customizable components of [Tailwind UI](https://tailwindcss.com/).
+- **Pre-built Components** - Speed up your development process by accessing pre-built components.
+- **Supabase Database** - Use Supabase Database to create a high-performance backend that can handle large amounts of data.
+- **Authentication & Authorization** - Implement secure access controls on your website with [Supabase](https://supabase.com/docs/guides/auth/overview), so only authorized users can access certain areas or features.
+- **Automatic syncing** - Automatically sync pricing plans and subscription statuses via [Stripe webhooks](https://stripe.com/docs/webhooks)
+- **Social Logins** - Make sign-up easy for your users by allowing them to use their social media accounts to register for your website.
+- **Email Notifications** - Keep your users in the loop by sending them email notifications about important updates or events.
 
 ## Demo
 
@@ -27,17 +27,15 @@ Get your SaaS app up and running in no time with the ultimate SaaS boilerplate. 
 
 The Vercel deployment will guide you through creating a Supabase account and project. After installing the Supabase integration, you'll need to configure Stripe with a few simple steps.
 
-**Note:** We're working on our Stripe integration. We've documented the required steps below under "Configure Stripe" until the integration is ready.
-
 To get started, click the "Deploy with Vercel" button below.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnextjs-subscription-payments&project-name=nextjs-subscription-payments&repo-name=nextjs-subscription-payments&demo-title=Next.js%20Subscription%20Payments%20Starter&demo-description=Demo%20project%20on%20Vercel&demo-url=https%3A%2F%2Fsubscription-payments.vercel.app&demo-image=https%3A%2F%2Fsubscription-payments.vercel.app%2Fdemo.png&integration-ids=oac_jUduyjQgOyzev1fjrW83NYOv&external-id=nextjs-subscription-payments)
 
 [![Screenshot of Vercel deployment](./public/vercel-deploy.png)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnextjs-subscription-payments&project-name=nextjs-subscription-payments&repo-name=nextjs-subscription-payments&demo-title=Next.js%20Subscription%20Payments%20Starter&demo-description=Demo%20project%20on%20Vercel&demo-url=https%3A%2F%2Fsubscription-payments.vercel.app&demo-image=https%3A%2F%2Fsubscription-payments.vercel.app%2Fdemo.png&integration-ids=oac_jUduyjQgOyzev1fjrW83NYOv&external-id=nextjs-subscription-payments)
 
-Once the project has deployed, continue with the configuration steps below.
+After deploying the project, follow the configuration steps provided below.
 
-The initial build will fail due to missing Stripe environment variables. After configuring Stripe, redeploy the application.
+During the initial build, an error will occur due to the absence of Stripe environment variables. Once you have configured Stripe, redeploy the application.
 
 ## Configure Supabase Auth
 
@@ -53,11 +51,11 @@ You can use third-party login providers like GitHub or Google. Refer to the [doc
 
 ## Configure Stripe
 
-To start developing your SaaS application, we'll need to configure Stripe to handle test payments. For the following steps, make sure you have the ["Test Mode" toggle](https://stripe.com/docs/testing) switched on.
+In order to begin developing your SaaS application, it is necessary to set up Stripe to process test payments. To ensure successful completion of the subsequent steps, please ensure that you have activated the "Test Mode" toggle as outlined in [Stripe's documentation](https://stripe.com/docs/testing).
 
 ### Configure webhook
 
-We need to configure the webhook pictured in the architecture diagram above. This webhook is the piece that connects Stripe to your Vercel Serverless Functions.
+It is necessary to set up the webhook depicted in the architecture diagram above, as this component serves as the bridge connecting Stripe to your Vercel Serverless Functions.
 
 1. Click the "Add Endpoint" button on the [test Endpoints page](https://dashboard.stripe.com/test/webhooks).
 1. Set the endpoint URL to `https://your-deployment-url.vercel.app/api/webhooks`.
@@ -77,9 +75,9 @@ You can find the first two keys on the [API keys tab](https://dashboard.stripe.c
 
 ### Redeploy
 
-We need to redeploy the application so that the latest environment variables are present.
+To ensure that the most up-to-date environment variables are in place, it is necessary to redeploy the application. 
 
-Redeploy your application by going to the deployments tab, finding your deployment, and clicking "redeploy."
+You can achieve this by navigating to the deployments tab, locating your deployment, and selecting the "redeploy" option.
 
 ### Create product and pricing information
 
@@ -89,12 +87,19 @@ Stripe Checkout currently supports pricing that bills a predefined amount at a s
 
 For example, you can create business models with different pricing tiers, e.g.:
 
-- Product 1: Hobby
+- **Product 1**: Hobby
   - Price 1: 10 USD per month
   - Price 2: 100 USD per year
-- Product 2: Freelancer
+- **Product 2**: Freelancer
   - Price 1: 20 USD per month
   - Price 2: 200 USD per year
+- **Product 3**: Professional
+  - Price 1: 30 USD per month
+  - Price 2: 300 USD per year
+- **Product 4**: Expert
+  - Price 1: 50 USD per month
+  - Price 2: 500 USD per year
+  
 
 #### Generate test data with the Stripe CLI
 
