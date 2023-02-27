@@ -19,9 +19,9 @@ Learn how to setup Core Kit in [Setup](Setup.md)
 
 ## Demo
 
-- https://subscription-payments.vercel.app/
+- https://corekit.lol
 
-[![Screenshot of demo](./public/demo.png)](https://subscription-payments.vercel.app/)
+[![Screenshot of demo](./public/demo.png)](https://corekit.lol)
 
 ## Architecture
 
