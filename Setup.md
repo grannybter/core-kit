@@ -4,9 +4,9 @@ The Vercel deployment will guide you through creating a Supabase account and pro
 
 To get started, click the "Deploy with Vercel" button below.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fgrannybter%2Fcore-kit&project-name=core-kit&repo-name=core-kit&demo-title=Core%20Kit&demo-description=Demo%20project&demo-url=https%3A%2F%2Fdemo.corekit.lol&demo-image=https%3A%2F%2Fsubscription-payments.vercel.app%2Fdemo.png&integration-ids=oac_jUduyjQgOyzev1fjrW83NYOv&external-id=nextjs-subscription-payments)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fgrannybter%2Fcore-kit&project-name=core-kit&repo-name=core-kit&demo-title=Core%20Kit&demo-description=Demo%20project&demo-url=https%3A%2F%2Fdemo.corekit.lol&integration-ids=oac_jUduyjQgOyzev1fjrW83NYOv&external-id=nextjs-subscription-payments)
 
-[![Screenshot of Vercel deployment](./public/vercel-deploy.png)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fgrannybter%2Fcore-kit&project-name=core-kit&repo-name=core-kit&demo-title=Core%20Kit&demo-description=Demo%20project&demo-url=https%3A%2F%2Fdemo.corekit.lol&demo-image=https%3A%2F%2Fsubscription-payments.vercel.app%2Fdemo.png&integration-ids=oac_jUduyjQgOyzev1fjrW83NYOv&external-id=nextjs-subscription-payments)
+[![Screenshot of Vercel deployment](./public/vercel-deploy.png)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fgrannybter%2Fcore-kit&project-name=core-kit&repo-name=core-kit&demo-title=Core%20Kit&demo-description=Demo%20project&demo-url=https%3A%2F%2Fdemo.corekit.lol&integration-ids=oac_jUduyjQgOyzev1fjrW83NYOv&external-id=nextjs-subscription-payments)
 
 After deploying the project, follow the configuration steps provided below.
 
