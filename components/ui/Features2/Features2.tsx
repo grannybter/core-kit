@@ -46,7 +46,7 @@ const features = [
   {
     name: 'Automatic syncing',
     description:
-      'Automatically sync pricing plans and subscription statuses via Stripe webhooks',
+      'Automatically sync pricing plans and subscription statuses via Stripe webhooks.',
     icon: ArrowPathIcon,
   },
 ]
