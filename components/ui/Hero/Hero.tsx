@@ -17,23 +17,23 @@ export default function Hero() {
           <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                LANDING
+                Simplify Your SaaS Development with Core Kit LANDING
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
                 Get your SaaS app up and running in no time with the ultimate SaaS
                 boilerplate. Streamline development and focus on building your app instead of working on tedious standard features.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
-                <Link href="/dashboard">
-                  <a className="group inline-flex items-center rounded-full bg-slate-900 px-4 py-1.5 font-semibold text-white transition hover:bg-slate-700">
-                    Try it out
+                <Link href="https://github.com/grannybter/core-kit">
+                  <a target="_blank" className="group inline-flex items-center rounded-full bg-slate-900 px-4 py-1.5 font-semibold text-white transition hover:bg-slate-700">
+                    Get Code
                     <Arrow />
                   </a>
                 </Link>
 
-                <Link href="https://github.com/grannybter/core-kit">
+                <Link href="https://demo.corekit.lol">
                   <a target="_blank" className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 font-semibold text-slate-700 transition hover:bg-gray-100">
-                    Get Code
+                    Live Demo
                     <Arrow stroke="black"/>
                   </a>
                 </Link>
