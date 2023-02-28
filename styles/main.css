@@ -50,3 +50,7 @@ a {
 .height-screen-helper {
   height: calc(100vh - 80px);
 }
+
+.supabase-ui-auth_ui-message {
+  color: rgb(0, 0, 0);
+}
