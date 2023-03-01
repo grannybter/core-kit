@@ -3,22 +3,13 @@ import s from './Navbar.module.css';
 import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 import {
-  ArrowPathIcon,
   Bars3Icon,
-  BookmarkSquareIcon,
-  CalendarIcon,
-  ChartBarIcon,
-  CursorArrowRaysIcon,
-  LifebuoyIcon,
-  PhoneIcon,
-  PlayIcon,
-  ShieldCheckIcon,
-  Squares2X2Icon,
   XMarkIcon,
   ArchiveBoxIcon,
   ClipboardDocumentIcon,
   WrenchScrewdriverIcon,
-  QuestionMarkCircleIcon
+  QuestionMarkCircleIcon,
+  StarIcon,
 } from '@heroicons/react/24/outline';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 
@@ -28,7 +19,7 @@ import Arrow from 'components/icons/Arrow';
 import { animateScroll as scroll, Link as L } from 'react-scroll';
 
 import { useUser } from 'utils/useUser';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 const resources = [
   {
@@ -52,14 +43,26 @@ const resources = [
   {
     name: 'FAQ',
     description: "Got questions? We've got answers.",
-    href: "https://github.com/grannybter/core-kit#faq",
+    href: 'https://github.com/grannybter/core-kit#faq',
     icon: QuestionMarkCircleIcon
   }
 ];
 const recentQuestions = [
-  { id: 1, name: 'What is the licensing agreement for this boilerplate?', href: 'https://github.com/grannybter/core-kit#faq' },
-  { id: 2, name: 'How do I set up my environment?', href: 'https://github.com/grannybter/core-kit#faq' },
-  { id: 3, name: 'Can I use this boilerplate for commercial purposes?', href: 'https://github.com/grannybter/core-kit#faq' }
+  {
+    id: 1,
+    name: 'What is the licensing agreement for this boilerplate?',
+    href: 'https://github.com/grannybter/core-kit#faq'
+  },
+  {
+    id: 2,
+    name: 'How do I set up my environment?',
+    href: 'https://github.com/grannybter/core-kit#faq'
+  },
+  {
+    id: 3,
+    name: 'Can I use this boilerplate for commercial purposes?',
+    href: 'https://github.com/grannybter/core-kit#faq'
+  }
 ];
 
 function classNames(
@@ -70,7 +73,7 @@ function classNames(
 
 export default function Navbar() {
   const { user } = useUser();
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <Popover className="relative bg-transparent z-20">
@@ -98,8 +101,8 @@ export default function Navbar() {
               duration={700}
               className="text-base font-medium text-mainblack hover:text-mainblack/70 cursor-pointer"
               onClick={() => {
-                if (router.pathname !== "/") {
-                  router.push("/#features")
+                if (router.pathname !== '/') {
+                  router.push('/#features');
                 }
               }}
             >
@@ -207,23 +210,35 @@ export default function Navbar() {
             </Popover>
           </Popover.Group>
           <div className="hidden md:flex flex-1 justify-end space-x-8 ">
-            {user ? (
-              <a>
-                <Link href="/dashboard">
-                  <a className="group inline-flex items-center rounded-full bg-slate-900 px-4 py-1.5 font-semibold text-white transition hover:bg-slate-700">
-                    Dashboard
-                    <Arrow />
-                  </a>
-                </Link>
-              </a>
-            ) : (
-              <Link href="/signin">
-                <a className="group inline-flex items-center rounded-full bg-slate-900 px-4 py-1.5 font-semibold text-white transition hover:bg-slate-700">
-                  Sign in
-                  <Arrow />
-                </a>
-              </Link>
-            )}
+            <a
+              href="https://github.com/grannybter/core-kit"
+              target="_blank"
+              className="hover:bg-slate-200/50 relative cursor-pointer inline-flex items-center space-x-2 text-center font-regular transition ease-out duration-200 rounded outline-none transition-all outline-0 focus-visible:outline-4 focus-visible:outline-offset-1 text-scale-1200 hover:bg-scale-500 shadow-none focus-visible:outline-scale-700  text-xs px-2.5 py-1 group hidden lg:flex"
+            >
+              <div className="text-brand-800 flex h-4 w-4 items-center justify-center">
+                <div className="text-scale-900 text-black flex h-8 w-8 items-center justify-center transition-all group-hover:h-12 group-hover:w-12 group-hover:text-yellow-400">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="sbui-icon "
+                  >
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+              </div>
+              <span className="text-mainblack text-base font-semibold">Star us on GitHub</span>
+            </a>
+            <a className="group inline-flex items-center rounded-full bg-slate-900 px-4 py-1.5 font-semibold text-white transition hover:bg-slate-700">
+              Sign in
+              <Arrow />
+            </a>
           </div>
         </div>
       </div>
