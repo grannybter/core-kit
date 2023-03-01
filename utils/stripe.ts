@@ -6,7 +6,7 @@ export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_LIVE ?? process.e
   // Register this as an official Stripe plugin.
   // https://stripe.com/docs/building-plugins#setappinfo
   appInfo: {
-    name: 'Next.js Subscription Starter',
+    name: 'Core Kit',
     version: '0.1.0'
   }
 });
