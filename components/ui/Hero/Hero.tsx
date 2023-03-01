@@ -20,21 +20,13 @@ export default function Hero() {
                 Simplify Your SaaS Development with Core Kit
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Get your SaaS app up and running in no time with the ultimate SaaS
-                boilerplate. Streamline development and focus on building your app instead of working on tedious standard features.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur , rerum totam et laudantium nesciunt enim dolorem, tempore omnis molestias est doloribus quas!
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Link href="/dashboard">
                   <a className="group inline-flex items-center rounded-full bg-slate-900 px-4 py-1.5 font-semibold text-white transition hover:bg-slate-700">
-                    Try it out
+                    Get Started
                     <Arrow />
-                  </a>
-                </Link>
-
-                <Link href="https://github.com/grannybter/core-kit">
-                  <a target="_blank" className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 font-semibold text-slate-700 transition hover:bg-gray-100">
-                    Get Code
-                    <Arrow stroke="black"/>
                   </a>
                 </Link>
               </div>

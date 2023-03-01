@@ -3,19 +3,18 @@ import React, { useRef } from 'react';
 
 const features = [
   {
-    name: 'Clone Repository.',
-    description: 'Access and download the source code of Core Kit by cloning the repository to your local machine.',
+    name: 'Lorem ipsum dolor.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis molestias est doloribus quas!',
     icon: LockClosedIcon,
   },
   {
-    name: 'Edit Codebase.',
-    description: 'Make changes to the codebase using your preferred code editor and then commit your changes to the repository.',
+    name: 'Lorem ipsum dolor.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis molestias est doloribus quas!',
     icon: ServerIcon,
   },
   {
-    name: 'Push to Deploy.',
-    description:
-      "Once you're satisfied with your changes, push your updated codebase to the repository and trigger an automated deployment with Vercel.",
+    name: 'Lorem ipsum dolor.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis molestias est doloribus quas!',
     icon: CloudArrowUpIcon,
   },
 ]
@@ -30,10 +29,10 @@ export default function Features() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-lg">
-              <h2 className="text-lg font-semibold leading-8 tracking-tight text-azul">Accelerate your time-to-market</h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">A better workflow</p>
+              <h2 className="text-lg font-semibold leading-8 tracking-tight text-azul">Your subtitle here</h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Your title here</p>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-              Optimize your development process with our streamlined workflow, designed to increase efficiency, reduce errors, and enhance collaboration across your team.
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio, enim, est perferendis quaerat delectus ab soluta aliquid culpa, accusantium natus ipsa.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
