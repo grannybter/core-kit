@@ -21,49 +21,6 @@ import { animateScroll as scroll, Link as L } from 'react-scroll';
 import { useUser } from 'utils/useUser';
 import { useRouter } from 'next/router';
 
-const resources = [
-  {
-    name: 'Customer Support',
-    description: 'Get all of your questions answered in our forums on Github.',
-    href: 'https://github.com/grannybter/core-kit/issues',
-    icon: ClipboardDocumentIcon
-  },
-  {
-    name: 'Setup Guide',
-    description: 'Learn how to setup your project.',
-    href: 'https://github.com/grannybter/core-kit/blob/main/Setup.md',
-    icon: WrenchScrewdriverIcon
-  },
-  {
-    name: 'Github Repository',
-    description: 'View codebase on Github.',
-    href: 'https://github.com/grannybter/core-kit',
-    icon: ArchiveBoxIcon
-  },
-  {
-    name: 'FAQ',
-    description: "Got questions? We've got answers.",
-    href: 'https://github.com/grannybter/core-kit#faq',
-    icon: QuestionMarkCircleIcon
-  }
-];
-const recentQuestions = [
-  {
-    id: 1,
-    name: 'What is the licensing agreement for this boilerplate?',
-    href: 'https://github.com/grannybter/core-kit#faq'
-  },
-  {
-    id: 2,
-    name: 'How do I set up my environment?',
-    href: 'https://github.com/grannybter/core-kit#faq'
-  },
-  {
-    id: 3,
-    name: 'Can I use this boilerplate for commercial purposes?',
-    href: 'https://github.com/grannybter/core-kit#faq'
-  }
-];
 
 function classNames(
   ...classes: Array<string | undefined | null | false | 0>
@@ -110,110 +67,24 @@ export default function Navbar() {
             </L>
 
             <a
-              href="/pricing"
+              href="https://github.com/grannybter/core-kit/blob/main/Setup.md"
               className="text-base font-medium text-mainblack hover:text-mainblack/70"
             >
-              Pricing
+              Docs
             </a>
 
-            <Popover className="relative">
-              {({ open }) => (
-                <>
-                  <Popover.Button
-                    className={classNames(
-                      open ? 'text-mainblack/70' : 'text-mainblack',
-                      'group inline-flex items-center rounded-md bg-transparent text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-azul focus:ring-offset-2'
-                    )}
-                  >
-                    <span>Resources</span>
-                    <ChevronDownIcon
-                      className={classNames(
-                        open ? 'text-gray-600' : 'text-gray-400',
-                        'ml-2 h-5 w-5 group-hover:text-gray-500'
-                      )}
-                      aria-hidden="true"
-                    />
-                  </Popover.Button>
-
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-200"
-                    enterFrom="opacity-0 translate-y-1"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in duration-150"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 translate-y-1"
-                  >
-                    <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
-                      <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                        <div className="relative grid gap-6 bg-mainwhite px-5 py-6 sm:gap-8 sm:p-8">
-                          {resources.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
-                              target="_blank"
-                            >
-                              <item.icon
-                                className="h-6 w-6 flex-shrink-0 text-azul"
-                                aria-hidden="true"
-                              />
-                              <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </a>
-                          ))}
-                        </div>
-                        <div className="bg-gray-50 px-5 py-5 sm:px-8 sm:py-8">
-                          <div>
-                            <h3 className="text-base font-medium text-gray-500">
-                              Frequent Questions
-                            </h3>
-                            <ul role="list" className="mt-4 space-y-4">
-                              {recentQuestions.map((post) => (
-                                <li
-                                  key={post.id}
-                                  className="truncate text-base"
-                                >
-                                  <a
-                                    href={post.href}
-                                    className="font-medium text-gray-900 hover:text-gray-700"
-                                    target="_blank"
-                                  >
-                                    {post.name}
-                                  </a>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          <div className="mt-5 text-sm">
-                            <a
-                              href="https://github.com/grannybter/core-kit#faq"
-                              className="font-medium text-azul hover:text-azul/70"
-                              target="_blank"
-                            >
-                              View FAQ
-                              <span aria-hidden="true"> &rarr;</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </Popover.Panel>
-                  </Transition>
-                </>
-              )}
-            </Popover>
+            <a
+              href="https://github.com/grannybter/core-kit#faq"
+              className="text-base font-medium text-mainblack hover:text-mainblack/70"
+            >
+              FAQ
+            </a>
           </Popover.Group>
           <div className="hidden md:flex flex-1 justify-end space-x-8 ">
             <a
               href="https://github.com/grannybter/core-kit"
               target="_blank"
-              className="hover:bg-slate-200/50 relative cursor-pointer inline-flex items-center space-x-2 text-center font-regular transition ease-out duration-200 rounded outline-none transition-all outline-0 focus-visible:outline-4 focus-visible:outline-offset-1 text-scale-1200 hover:bg-scale-500 shadow-none focus-visible:outline-scale-700  text-xs px-2.5 py-1 group hidden lg:flex"
+              className="bg-slate-200 hover:bg-slate-300/50 relative cursor-pointer inline-flex items-center space-x-2 text-center font-regular transition ease-out duration-200 rounded outline-none transition-all outline-0 focus-visible:outline-4 focus-visible:outline-offset-1 text-scale-1200 hover:bg-scale-500 shadow-none focus-visible:outline-scale-700  text-xs px-2.5 py-1 group hidden lg:flex"
             >
               <div className="text-brand-800 flex h-4 w-4 items-center justify-center">
                 <div className="text-scale-900 text-black flex h-8 w-8 items-center justify-center transition-all group-hover:h-12 group-hover:w-12 group-hover:text-yellow-400">
@@ -235,97 +106,10 @@ export default function Navbar() {
               </div>
               <span className="text-mainblack text-base font-semibold">Star us on GitHub</span>
             </a>
-            <a className="group inline-flex items-center rounded-full bg-slate-900 px-4 py-1.5 font-semibold text-white transition hover:bg-slate-700">
-              Sign in
-              <Arrow />
-            </a>
+
           </div>
         </div>
       </div>
-
-      <Transition
-        as={Fragment}
-        enter="duration-200 ease-out"
-        enterFrom="opacity-0 scale-95"
-        enterTo="opacity-100 scale-100"
-        leave="duration-100 ease-in"
-        leaveFrom="opacity-100 scale-100"
-        leaveTo="opacity-0 scale-95"
-      >
-        <Popover.Panel
-          focus
-          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
-        >
-          <div className="divide-y-2 divide-gray-50 rounded-lg bg-mainwhite shadow-lg ring-1 ring-black ring-opacity-5">
-            <div className="px-5 pt-5 pb-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <Logo fill="#1c1c1c" />
-                </div>
-                <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-mainwhite p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-azul">
-                    <span className="sr-only">Close menu</span>
-                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                  </Popover.Button>
-                </div>
-              </div>
-              <div className="mt-6">
-                <nav className="grid gap-y-8">
-                  <L
-                    to="features"
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    offset={50}
-                    duration={700}
-                    className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
-                  >
-                    Features
-                  </L>
-                  <a
-                    href="/pricing"
-                    className="text-base font-medium text-gray-500 hover:text-gray-900"
-                  >
-                    Pricing
-                  </a>
-                </nav>
-              </div>
-            </div>
-            <div className="space-y-6 py-6 px-5">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                {resources.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-              <div>
-                {user ? (
-                  <a>
-                    <Link href="/dashboard">
-                      <a className="group w-full inline-flex items-center justify-center rounded-md bg-slate-900 px-4 py-2 font-semibold text-white transition hover:bg-slate-700">
-                        Dashboard
-                        <Arrow />
-                      </a>
-                    </Link>
-                  </a>
-                ) : (
-                  <Link href="/signin">
-                    <a className="group w-full inline-flex items-center justify-center rounded-md bg-slate-900 px-4 py-2 font-semibold text-white transition hover:bg-slate-700">
-                      Star on GitHub
-                      <Arrow />
-                    </a>
-                  </Link>
-                )}
-              </div>
-            </div>
-          </div>
-        </Popover.Panel>
-      </Transition>
     </Popover>
   );
 }

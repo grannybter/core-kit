@@ -33,16 +33,16 @@ export default function CTA() {
               Get months worth of work done in minutes.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Link href="/dashboard">
+              <Link href="https://github.com/grannybter/core-kit">
                 <a className="group inline-flex items-center rounded-full bg-white px-4 py-1.5 font-semibold text-slate-700 transition hover:bg-gray-300">
-                  Live Demo
+                  Github
                   <Arrow stroke="black"/>
                 </a>
               </Link>
 
-              <Link href="https://github.com/grannybter/core-kit">
+              <Link href="https://demo.corekit.lol/">
                 <a target="_blank" className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 font-semibold text-white transition hover:bg-gray-100 hover:bg-opacity-10">
-                  Get Code
+                  Try Demo
                   <Arrow/>
                 </a>
               </Link>
