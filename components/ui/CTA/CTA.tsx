@@ -27,22 +27,22 @@ export default function CTA() {
           </svg>
           <div className="mx-auto text-center lg:mx-0 lg:flex-auto lg:py-32 pb-16">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Accelerate your production time. Start using Core Kit today.
+            Boost your productivity. Start using our app today.
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Get months worth of work done in minutes.
+            Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link href="/dashboard">
                 <a className="group inline-flex items-center rounded-full bg-white px-4 py-1.5 font-semibold text-slate-700 transition hover:bg-gray-300">
-                  Live Demo
+                  Get Started
                   <Arrow stroke="black"/>
                 </a>
               </Link>
 
-              <Link href="https://github.com/grannybter/core-kit">
-                <a target="_blank" className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 font-semibold text-white transition hover:bg-gray-100 hover:bg-opacity-10">
-                  Get Code
+              <Link href="/pricing">
+                <a className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 font-semibold text-white transition hover:bg-gray-100 hover:bg-opacity-10">
+                  Pricing
                   <Arrow/>
                 </a>
               </Link>

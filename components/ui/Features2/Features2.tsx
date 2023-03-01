@@ -4,49 +4,49 @@ const features = [
   {
     name: 'Your feature title',
     description:
-      'Charge your customers on a recurring basis for your services or products.',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maiores fugiat fugit doloribus.',
     icon: CreditCardIcon,
   },
   {
     name: 'Your feature title',
     description:
-      'Create lightning-fast web applications with ease by combining the power of the Next.js framework with the customizable components of Tailwind UI.',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maiores fugiat fugit doloribus.',
     icon: LockClosedIcon,
   },
   {
     name: 'Your feature title',
     description:
-      'Speed up your development process by accessing pre-built components.',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maiores fugiat fugit doloribus.',
     icon: CubeTransparentIcon,
   },
   {
     name: 'Your feature title',
     description:
-      'Use Supabase Database to create a high-performance backend that can handle large amounts of data.',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maiores fugiat fugit doloribus.',
     icon: TableCellsIcon,
   },
   {
     name: 'Your feature title',
     description:
-      'Implement secure access controls on your website, so only authorized users can access certain areas or features.',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maiores fugiat fugit doloribus.',
     icon: FingerPrintIcon,
   },
   {
     name: 'Your feature title',
     description:
-      'Make sign-up easy for your users by allowing them to use their social media accounts to register for your website.',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maiores fugiat fugit doloribus.',
     icon: UserPlusIcon,
   },
   {
     name: 'Your feature title',
     description:
-      'Keep your users in the loop by sending them email notifications about important updates or events.',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maiores fugiat fugit doloribus.',
     icon: BellAlertIcon,
   },
   {
     name: 'Your feature title',
     description:
-      'Automatically sync pricing plans and subscription statuses via Stripe webhooks.',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maiores fugiat fugit doloribus.',
     icon: ArrowPathIcon,
   },
 ]
