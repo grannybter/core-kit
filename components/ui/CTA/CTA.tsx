@@ -34,7 +34,7 @@ export default function CTA() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link href="https://github.com/grannybter/core-kit">
-                <a className="group inline-flex items-center rounded-full bg-white px-4 py-1.5 font-semibold text-slate-700 transition hover:bg-gray-300">
+                <a target="_blank" className="group inline-flex items-center rounded-full bg-white px-4 py-1.5 font-semibold text-slate-700 transition hover:bg-gray-300">
                   Github
                   <Arrow stroke="black"/>
                 </a>
