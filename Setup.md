@@ -162,3 +162,10 @@ npm run dev
 yarn
 yarn dev
 ```
+## Common Setup Issues
+
+### Stripe products not getting pulled into supabase
+
+If your Stripe products are not showing up on your website, it is most likely an issue with your Supabase project or your Stripe webhooks. First, check to see if the tables in your Supabase project have been created. If they have not, you need to copy the contents of [schema.sql](schema.sql) and paste them into a new query in the SQL editor in Supabase. Run the query and check to make sure that the tables have been created successfully.
+
+If your tables were created successfully when initializing the Supabase project and your products are still not showing up, then the problem most likely lies in your Stripe webhooks. If you have cloned the project in the past, this could cause issues with listening on the same ports as your previous project. If you previously listened on port 3000, try running your project and listening on port 3001 instead.
