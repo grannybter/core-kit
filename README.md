@@ -23,10 +23,6 @@ Learn how to setup Core Kit in [Setup](Setup.md)
 
 [![Screenshot of demo](./public/demo.png)](https://corekit.lol)
 
-## Architecture
-
-![Architecture diagram](./public/arch.png)
-
 ## FAQ
 
 - **What is a SaaS boilerplate?**
